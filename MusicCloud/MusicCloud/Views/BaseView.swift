@@ -41,7 +41,13 @@ class BaseView: UIView {
     // MARK: - Show on super view -
     //-------------------------------------------------------------------------------------------------------
     func addToWindow() {
-        UIApplication.shared.keyWindow?.addSubview(self)
+        let kWindow = UIApplication.shared.connectedScenes
+                .filter({$0.activationState == .foregroundActive})
+                .map({$0 as? UIWindowScene})
+                .compactMap({$0})
+                .first?.windows
+                .filter({$0.isKeyWindow}).first
+        kWindow?.addSubview(self)
     }
 
     //-------------------------------------------------------------------------------------------------------

@@ -24,8 +24,8 @@ class LoginVC: UIViewController {
     
     @IBAction func btnSignInClicked(_ sender: UIButton) {
 
-        let email = tfEmail.text!
-        let password = tfPassword.text!
+        //let email = tfEmail.text!
+        //let password = tfPassword.text!
 //        HttpRequests.request(request: LoginAPI(username: email, password: password)) { (result, response) in
 //            if result {
 //                print(response.accessToken)

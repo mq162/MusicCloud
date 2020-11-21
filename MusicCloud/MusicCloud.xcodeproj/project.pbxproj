@@ -37,6 +37,21 @@
 		1830ADC62568B8D600E9695D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADC52568B8D600E9695D /* BaseView.swift */; };
 		1830ADC92568B91F00E9695D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADC82568B91F00E9695D /* Utils.swift */; };
 		1830ADD52568BCEB00E9695D /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 1830ADD42568BCEB00E9695D /* NVActivityIndicatorView */; };
+		1830ADD92568C11000E9695D /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADD82568C11000E9695D /* APIServices.swift */; };
+		1830ADDC2568C14F00E9695D /* HttpsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADDB2568C14F00E9695D /* HttpsRequest.swift */; };
+		1830ADE22568C19B00E9695D /* BaseAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADE12568C19B00E9695D /* BaseAPIProtocol.swift */; };
+		1830ADE62568C1D000E9695D /* BaseRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADE52568C1D000E9695D /* BaseRequestModel.swift */; };
+		1830ADE92568C29A00E9695D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADE82568C29A00E9695D /* Constants.swift */; };
+		1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADED2568CA0E00E9695D /* TrackCell.swift */; };
+		1830ADF62568CAA900E9695D /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830ADF52568CAA900E9695D /* TrackCell.xib */; };
+		18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D589252568EA3800C5FCA3 /* TrackGridCell.swift */; };
+		18D589282568EA3800C5FCA3 /* TrackGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D589262568EA3800C5FCA3 /* TrackGridCell.xib */; };
+		18D5892D2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5892C2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift */; };
+		18D589322568FC1F00C5FCA3 /* GetListTrackRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D589312568FC1F00C5FCA3 /* GetListTrackRequestModel.swift */; };
+		18D589352568FC3C00C5FCA3 /* GetListTrackResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D589342568FC3C00C5FCA3 /* GetListTrackResponseModel.swift */; };
+		18D5893A2568FC6400C5FCA3 /* GetListTrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D589392568FC6400C5FCA3 /* GetListTrackAPI.swift */; };
+		18D5893D2568FD7A00C5FCA3 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5893C2568FD7A00C5FCA3 /* BaseModel.swift */; };
+		18D589402569057C00C5FCA3 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5893F2569057C00C5FCA3 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +83,21 @@
 		1830ADC12568B85D00E9695D /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		1830ADC52568B8D600E9695D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		1830ADC82568B91F00E9695D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		1830ADD82568C11000E9695D /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		1830ADDB2568C14F00E9695D /* HttpsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpsRequest.swift; sourceTree = "<group>"; };
+		1830ADE12568C19B00E9695D /* BaseAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIProtocol.swift; sourceTree = "<group>"; };
+		1830ADE52568C1D000E9695D /* BaseRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestModel.swift; sourceTree = "<group>"; };
+		1830ADE82568C29A00E9695D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1830ADED2568CA0E00E9695D /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		1830ADF52568CAA900E9695D /* TrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		18D589252568EA3800C5FCA3 /* TrackGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackGridCell.swift; sourceTree = "<group>"; };
+		18D589262568EA3800C5FCA3 /* TrackGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackGridCell.xib; sourceTree = "<group>"; };
+		18D5892C2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewStyleEnum.swift; sourceTree = "<group>"; };
+		18D589312568FC1F00C5FCA3 /* GetListTrackRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListTrackRequestModel.swift; sourceTree = "<group>"; };
+		18D589342568FC3C00C5FCA3 /* GetListTrackResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListTrackResponseModel.swift; sourceTree = "<group>"; };
+		18D589392568FC6400C5FCA3 /* GetListTrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListTrackAPI.swift; sourceTree = "<group>"; };
+		18D5893C2568FD7A00C5FCA3 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		18D5893F2569057C00C5FCA3 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +139,7 @@
 				1830AD882568B3D800E9695D /* Common */,
 				1830ADC02568B83800E9695D /* Extensions */,
 				1830AD852568B3C700E9695D /* Utils */,
+				18D5892B2568EB8600C5FCA3 /* Enums */,
 				1830AD872568B3D100E9695D /* Services */,
 				1830AD862568B3CC00E9695D /* Models */,
 				1830AD842568B3C200E9695D /* Views */,
@@ -154,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				1830ADC52568B8D600E9695D /* BaseView.swift */,
+				1830ADEC2568C99300E9695D /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +208,7 @@
 				1830ADB22568B75500E9695D /* Track.swift */,
 				1830ADB52568B75500E9695D /* TrackRepost.swift */,
 				1830ADB12568B75500E9695D /* User.swift */,
+				18D5893C2568FD7A00C5FCA3 /* BaseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +216,10 @@
 		1830AD872568B3D100E9695D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1830ADE02568C18700E9695D /* APIService */,
+				1830ADDF2568C17A00E9695D /* RequestModel */,
+				1830ADD82568C11000E9695D /* APIServices.swift */,
+				1830ADDB2568C14F00E9695D /* HttpsRequest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -190,6 +227,7 @@
 		1830AD882568B3D800E9695D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1830ADE82568C29A00E9695D /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -252,8 +290,79 @@
 			isa = PBXGroup;
 			children = (
 				1830ADC12568B85D00E9695D /* UIViewExtension.swift */,
+				18D5893F2569057C00C5FCA3 /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1830ADDF2568C17A00E9695D /* RequestModel */ = {
+			isa = PBXGroup;
+			children = (
+				18D589302568FBFF00C5FCA3 /* GetListTrackModel */,
+				1830ADE52568C1D000E9695D /* BaseRequestModel.swift */,
+			);
+			path = RequestModel;
+			sourceTree = "<group>";
+		};
+		1830ADE02568C18700E9695D /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				1830ADE12568C19B00E9695D /* BaseAPIProtocol.swift */,
+				18D589382568FC4600C5FCA3 /* GetListTrackAPI */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		1830ADEC2568C99300E9695D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18D589242568EA2300C5FCA3 /* TrackGrid */,
+				18D589222568EA1C00C5FCA3 /* Track */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		18D589222568EA1C00C5FCA3 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				1830ADED2568CA0E00E9695D /* TrackCell.swift */,
+				1830ADF52568CAA900E9695D /* TrackCell.xib */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		18D589242568EA2300C5FCA3 /* TrackGrid */ = {
+			isa = PBXGroup;
+			children = (
+				18D589252568EA3800C5FCA3 /* TrackGridCell.swift */,
+				18D589262568EA3800C5FCA3 /* TrackGridCell.xib */,
+			);
+			path = TrackGrid;
+			sourceTree = "<group>";
+		};
+		18D5892B2568EB8600C5FCA3 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				18D5892C2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		18D589302568FBFF00C5FCA3 /* GetListTrackModel */ = {
+			isa = PBXGroup;
+			children = (
+				18D589312568FC1F00C5FCA3 /* GetListTrackRequestModel.swift */,
+				18D589342568FC3C00C5FCA3 /* GetListTrackResponseModel.swift */,
+			);
+			path = GetListTrackModel;
+			sourceTree = "<group>";
+		};
+		18D589382568FC4600C5FCA3 /* GetListTrackAPI */ = {
+			isa = PBXGroup;
+			children = (
+				18D589392568FC6400C5FCA3 /* GetListTrackAPI.swift */,
+			);
+			path = GetListTrackAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,8 +437,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1830AD612568B0EF00E9695D /* LaunchScreen.storyboard in Resources */,
+				18D589282568EA3800C5FCA3 /* TrackGridCell.xib in Resources */,
 				1830ADA92568B48800E9695D /* SearchVC.xib in Resources */,
 				1830AD8B2568B41800E9695D /* HistoryVC.xib in Resources */,
+				1830ADF62568CAA900E9695D /* TrackCell.xib in Resources */,
 				1830ADA52568B47500E9695D /* PlaylistVC.xib in Resources */,
 				1830AD942568B43A00E9695D /* StreamVC.xib in Resources */,
 				1830AD5E2568B0EF00E9695D /* Assets.xcassets in Resources */,
@@ -352,14 +463,27 @@
 				1830ADBE2568B75500E9695D /* Playlist.swift in Sources */,
 				1830ADAF2568B49900E9695D /* LoginVC.swift in Sources */,
 				1830AD552568B0EB00E9695D /* AppDelegate.swift in Sources */,
+				18D5892D2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift in Sources */,
+				1830ADD92568C11000E9695D /* APIServices.swift in Sources */,
 				1830ADB82568B75500E9695D /* User.swift in Sources */,
+				18D589322568FC1F00C5FCA3 /* GetListTrackRequestModel.swift in Sources */,
+				18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */,
 				1830ADBA2568B75500E9695D /* Favorite.swift in Sources */,
+				1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */,
 				1830ADC92568B91F00E9695D /* Utils.swift in Sources */,
+				1830ADE62568C1D000E9695D /* BaseRequestModel.swift in Sources */,
+				1830ADE22568C19B00E9695D /* BaseAPIProtocol.swift in Sources */,
+				18D5893D2568FD7A00C5FCA3 /* BaseModel.swift in Sources */,
 				1830ADB92568B75500E9695D /* Track.swift in Sources */,
 				1830ADBD2568B75500E9695D /* Comment.swift in Sources */,
+				18D589402569057C00C5FCA3 /* UIImageViewExtension.swift in Sources */,
 				1830AD8C2568B41800E9695D /* HistoryVC.swift in Sources */,
 				1830ADA42568B47500E9695D /* PlaylistVC.swift in Sources */,
+				1830ADDC2568C14F00E9695D /* HttpsRequest.swift in Sources */,
 				1830AD952568B43A00E9695D /* StreamVC.swift in Sources */,
+				18D5893A2568FC6400C5FCA3 /* GetListTrackAPI.swift in Sources */,
+				18D589352568FC3C00C5FCA3 /* GetListTrackResponseModel.swift in Sources */,
+				1830ADE92568C29A00E9695D /* Constants.swift in Sources */,
 				1830ADBB2568B75500E9695D /* PlaylistRepost.swift in Sources */,
 				1830ADC62568B8D600E9695D /* BaseView.swift in Sources */,
 			);

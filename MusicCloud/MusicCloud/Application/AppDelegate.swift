@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabbarController.viewControllers = [streamNavi, playlistNavi, searchNavi, historyNavi, profileNavi]
         tabbarController.tabBar.tintColor = UIColor(red: 0.100, green: 0.771, blue: 0.530, alpha: 1.000)
         
-        window?.rootViewController = LoginVC()
+        window?.rootViewController = tabbarController
         window?.makeKeyAndVisible()
         
         return true

@@ -5,10 +5,12 @@
 //  Created by Quang Pham on 19/11/2020.
 //
 
+import ObjectMapper
 import Foundation
 
-struct Track: Codable {
+class Track: BaseModel, Hashable {
     
+    var id: Int = 0
     var user: User?
     var artwork_url: String?
     var created_at: String?
@@ -23,7 +25,6 @@ struct Track: Codable {
     var comment_count: Int?
     var favoritings_count: Int?
     var likes_count: Int?
-    var anId: Int?
     var duration: Int?
     var download_url: String?
     var local_path: String?
@@ -31,8 +32,24 @@ struct Track: Codable {
     var isDownloadable: Bool = false
     var isStreamable: Bool = false
     
-    init(trackRespost respost: TrackRepost?) {
-        
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
     
+    static func == (lhs: Track, rhs: Track) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    override func mapping(map: Map) {
+        super.mapping(map: map)
+        id <- map["origin.id"]
+        user <- map["user"]
+        artwork_url <- map["origin.artwork_url"]
+        created_at <- map["created_at"]
+        directory_path <- map["directory_path"]
+        descriptionText <- map["descriptionText"]
+        permalink_url <- map["permalink_url"]
+        uri <- map["uri"]
+    }
+
 }
