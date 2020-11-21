@@ -19,6 +19,6 @@ class TrackGridCell: UICollectionViewCell {
     }
 
     func setupCell(track: Track) {
-        imgArtwork.loadArtwork(path: track.artwork_url)
+        imgArtwork.loadArtwork(path: track.artworkUrl)
     }
 }

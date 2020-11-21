@@ -18,6 +18,7 @@ class StreamVC: UIViewController {
     //private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Track>
     private var tracks = [Track]()
     //private var currentSnapshot: Snapshot?
+    private var nextUrl = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class StreamVC: UIViewController {
     private func setupView() {
         collectionView.register(UINib(nibName: TrackGridCell.identifier, bundle: nil),forCellWithReuseIdentifier: TrackGridCell.identifier)
         collectionView.collectionViewLayout = CollectionViewStyle.grid.layout()
+        collectionView.delegate = self
     }
 
     private func setupNavBar() {
@@ -43,17 +45,30 @@ class StreamVC: UIViewController {
     private func requestTrack() {
         HttpRequests.request(request: GetListTrackAPI(limit: 20)) { (result, response) in
             if result {
-                print(response.track.toJSON())
+                print(response.tracks.toJSON())
+                self.nextUrl = response.nextUrl
                 DispatchQueue.main.async {
-                    self.tracks.append(contentsOf: response.track)
-                    self.handle(response.track)
+                    self.tracks.append(contentsOf: response.tracks)
+                    self.handle(response.tracks)
+                }
+            }
+        }
+    }
+    
+    private func requestTrackNextPage() {
+        HttpRequests.request(request: GetListTrackNextPageAPI(url: self.nextUrl)) { (result, response) in
+            if result {
+                print(response.tracks.toJSON())
+                self.nextUrl = response.nextUrl
+                DispatchQueue.main.async {
+                    self.tracks.append(contentsOf: response.tracks)
+                    self.handle(self.tracks)
                 }
             }
         }
     }
     
     private func configureDataSource() {
-        
         dataSource = UICollectionViewDiffableDataSource<Section, Track>(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, track: Track?) -> UICollectionViewCell? in
             
@@ -76,5 +91,13 @@ class StreamVC: UIViewController {
         snapshot.appendSections([.main])
         snapshot.appendItems(tracks)
         self.dataSource.apply(snapshot, animatingDifferences: true)
+    }
+}
+
+extension StreamVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == tracks.count - 5 {
+            self.requestTrackNextPage()
+        }
     }
 }

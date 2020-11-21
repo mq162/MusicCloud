@@ -44,6 +44,7 @@
 		1830ADE92568C29A00E9695D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADE82568C29A00E9695D /* Constants.swift */; };
 		1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADED2568CA0E00E9695D /* TrackCell.swift */; };
 		1830ADF62568CAA900E9695D /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830ADF52568CAA900E9695D /* TrackCell.xib */; };
+		188E3DEA256951EE0087EAAD /* GetListTrackNextPageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E3DE9256951EE0087EAAD /* GetListTrackNextPageAPI.swift */; };
 		18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D589252568EA3800C5FCA3 /* TrackGridCell.swift */; };
 		18D589282568EA3800C5FCA3 /* TrackGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D589262568EA3800C5FCA3 /* TrackGridCell.xib */; };
 		18D5892D2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5892C2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift */; };
@@ -90,6 +91,7 @@
 		1830ADE82568C29A00E9695D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1830ADED2568CA0E00E9695D /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		1830ADF52568CAA900E9695D /* TrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		188E3DE9256951EE0087EAAD /* GetListTrackNextPageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListTrackNextPageAPI.swift; sourceTree = "<group>"; };
 		18D589252568EA3800C5FCA3 /* TrackGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackGridCell.swift; sourceTree = "<group>"; };
 		18D589262568EA3800C5FCA3 /* TrackGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackGridCell.xib; sourceTree = "<group>"; };
 		18D5892C2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewStyleEnum.swift; sourceTree = "<group>"; };
@@ -307,8 +309,8 @@
 		1830ADE02568C18700E9695D /* APIService */ = {
 			isa = PBXGroup;
 			children = (
-				1830ADE12568C19B00E9695D /* BaseAPIProtocol.swift */,
 				18D589382568FC4600C5FCA3 /* GetListTrackAPI */,
+				1830ADE12568C19B00E9695D /* BaseAPIProtocol.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -361,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				18D589392568FC6400C5FCA3 /* GetListTrackAPI.swift */,
+				188E3DE9256951EE0087EAAD /* GetListTrackNextPageAPI.swift */,
 			);
 			path = GetListTrackAPI;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				18D5893A2568FC6400C5FCA3 /* GetListTrackAPI.swift in Sources */,
 				18D589352568FC3C00C5FCA3 /* GetListTrackResponseModel.swift in Sources */,
 				1830ADE92568C29A00E9695D /* Constants.swift in Sources */,
+				188E3DEA256951EE0087EAAD /* GetListTrackNextPageAPI.swift in Sources */,
 				1830ADBB2568B75500E9695D /* PlaylistRepost.swift in Sources */,
 				1830ADC62568B8D600E9695D /* BaseView.swift in Sources */,
 			);

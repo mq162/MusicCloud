@@ -62,5 +62,45 @@ class HttpRequests: NSObject {
             }
         }
     }
-}
+    
+    static func requestWithUrl<T>(url: String, type: T.Type, completed: @escaping(_ result: Bool, _ response: T) -> Void) where T: ResponseBaseModel {
+        Utils.showLoadingIndicator()
+        print(url)
+        AF.request(url)
+            .validate(statusCode: HttpRequests.successRange)
+            .responseJSON { (response) in
+                Utils.hideLoadIndicator()
+                switch(response.result) {
+                case .success(let data):
+                    print("\n response: \(data)")
+                    if data is [String: Any] {
+                        let responseData = data as? [String: Any]
+                        completed(true, T.init(JSON: responseData!)!)
+                    } else if data is NSArray {
+                        let JSON = ["data": data]
+                        completed(true, T.init(JSON: JSON)!)
+                    }
+                case .failure(let error):
+                    print("failed \(error.localizedDescription)")
+                    var errorResponse = T.init()
+                    do {
+                        //let statusCode = response.response?.statusCode ?? 0
+                        if response.data != nil {
+                            let responseString = String(data: response.data!, encoding: .utf8) ?? ""
+                            print("error response \(responseString)")
+                            guard let JSON: [String: Any] =
+                                    try JSONSerialization.jsonObject(with: response.data!,
+                                                                     options: JSONSerialization.ReadingOptions()) as? [String : Any] else {
+                                return
+                            }
+                            errorResponse = T.init(JSON: JSON)!
+                        }
+                        completed(false, errorResponse)
+                    } catch {
+                        completed(false, errorResponse)
+                    }
+                }
+            }
+    }
 
+}

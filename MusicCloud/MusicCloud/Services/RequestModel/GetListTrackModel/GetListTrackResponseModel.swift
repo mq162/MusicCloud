@@ -8,10 +8,12 @@
 import ObjectMapper
 
 class GetListTrackResponseModel: ResponseBaseModel {
-    var track: [Track] = [Track]()
+    var tracks: [Track] = [Track]()
+    var nextUrl = ""
 
     override func mapping(map: Map) {
         super.mapping(map: map)
-        track <- map["collection"]
+        tracks <- map["collection"]
+        nextUrl <- map["next_href"]
     }
 }

@@ -12,8 +12,8 @@ class Track: BaseModel, Hashable {
     
     var id: Int = 0
     var user: User?
-    var artwork_url: String?
-    var created_at: String?
+    var artworkUrl: String?
+    var createdAt: String?
     var directory_path: String?
     var uri: String?
     var permalink_url: String?
@@ -44,8 +44,8 @@ class Track: BaseModel, Hashable {
         super.mapping(map: map)
         id <- map["origin.id"]
         user <- map["user"]
-        artwork_url <- map["origin.artwork_url"]
-        created_at <- map["created_at"]
+        artworkUrl <- map["origin.artwork_url"]
+        createdAt <- map["created_at"]
         directory_path <- map["directory_path"]
         descriptionText <- map["descriptionText"]
         permalink_url <- map["permalink_url"]
