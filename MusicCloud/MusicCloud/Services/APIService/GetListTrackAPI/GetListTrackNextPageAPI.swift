@@ -18,6 +18,10 @@ class GetListTrackNextPageAPI: BaseAuthAPIProtocol {
     var host: String {
         return url
     }
+    
+    var isShowLoading: Bool {
+        return false
+    }
 
     var path: String {
         return ""
