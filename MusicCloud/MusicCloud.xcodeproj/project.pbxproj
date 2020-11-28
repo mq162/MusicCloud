@@ -176,9 +176,9 @@
 			isa = PBXGroup;
 			children = (
 				1830AD9F2568B45400E9695D /* Login */,
+				1830AD912568B42B00E9695D /* Stream */,
 				1830ADA12568B46700E9695D /* Playlist */,
 				1830ADA02568B46100E9695D /* Search */,
-				1830AD912568B42B00E9695D /* Stream */,
 				1830AD902568B42500E9695D /* Profile */,
 				1830AD8E2568B41E00E9695D /* History */,
 			);

@@ -21,14 +21,14 @@ class Track: BaseModel, Hashable {
     var waveform_url: String?
     var title: String?
     var stream_url: String?
-    var playback_count: Int?
-    var comment_count: Int?
-    var favoritings_count: Int?
-    var likes_count: Int?
+    var playbackCount: Int?
+    var commentCount: Int?
+    var favoriteCount: Int?
+    var likesCount: Int?
     var duration: Int?
     var download_url: String?
     var local_path: String?
-    var reposts_count: Int?
+    var repostsCount: Int?
     var isDownloadable: Bool = false
     var isStreamable: Bool = false
     
@@ -44,12 +44,17 @@ class Track: BaseModel, Hashable {
         super.mapping(map: map)
         id <- map["origin.id"]
         user <- map["user"]
+        title <- map["title"]
         artworkUrl <- map["origin.artwork_url"]
         createdAt <- map["created_at"]
         directory_path <- map["directory_path"]
         descriptionText <- map["descriptionText"]
         permalink_url <- map["permalink_url"]
         uri <- map["uri"]
+        favoriteCount <- map["favoritings_count"]
+        likesCount <- map["likes_count"]
+        repostsCount <- map["reposts_count"]
+        commentCount <- map["comment_count"]
     }
 
 }

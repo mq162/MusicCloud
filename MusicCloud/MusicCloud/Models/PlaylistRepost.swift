@@ -11,7 +11,7 @@ struct PlaylistRepost: Codable {
     var title: String?
     var avatar_url: String?
     var artwork_url: String?
-    var user: User?
+    //var user: User?
     var url: String?
     var sharing: String?
     var track_count: Int?

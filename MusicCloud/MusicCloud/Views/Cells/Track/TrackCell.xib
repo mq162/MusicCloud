@@ -157,22 +157,12 @@
                 </mask>
             </variation>
             <connections>
-                <outlet property="artworkImage" destination="MvV-bH-YTI" id="BdE-8B-Ut0"/>
-                <outlet property="dateLabel" destination="5Iu-2a-FKK" id="HHD-zd-Wbm"/>
                 <outlet property="imgArtwork" destination="MvV-bH-YTI" id="vU5-mY-Zkm"/>
                 <outlet property="lblDate" destination="5Iu-2a-FKK" id="hwD-eY-Qvx"/>
                 <outlet property="lblPlaybackCount" destination="qiV-IX-bBp" id="xCP-zG-iyK"/>
                 <outlet property="lblRepostCount" destination="cPS-dE-fW0" id="kSw-4e-NUp"/>
                 <outlet property="lblTrackname" destination="lnI-F6-YAi" id="t1F-o1-3Nn"/>
                 <outlet property="lblUserName" destination="kzI-du-8yx" id="xEZ-vY-eBn"/>
-                <outlet property="moreImage" destination="5vh-0Z-xIU" id="JrH-jZ-hWf"/>
-                <outlet property="moreImageWrapperView" destination="E1T-MP-hTZ" id="F1E-cL-nkt"/>
-                <outlet property="playbackCountLabel" destination="qiV-IX-bBp" id="Q3v-89-oft"/>
-                <outlet property="playlistIndicatorLabel" destination="ezx-28-hvo" id="deH-0w-4U0"/>
-                <outlet property="playlistIndicatorView" destination="yyE-cO-TdG" id="JU3-aA-Fpk"/>
-                <outlet property="respostedLabel" destination="cPS-dE-fW0" id="DOG-tz-MLm"/>
-                <outlet property="trackNameLabel" destination="lnI-F6-YAi" id="vZS-Qh-lzh"/>
-                <outlet property="userNameLabel" destination="kzI-du-8yx" id="fXv-Ke-6C2"/>
             </connections>
             <point key="canvasLocation" x="337" y="267"/>
         </collectionViewCell>

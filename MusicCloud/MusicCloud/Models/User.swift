@@ -5,9 +5,9 @@
 //  Created by Quang Pham on 19/11/2020.
 //
 
-import Foundation
+import ObjectMapper
 
-struct User: Codable {
+class User: BaseModel {
     
     var avatarUrl: String?
     var country: String?
@@ -20,4 +20,10 @@ struct User: Codable {
     var playlistCount: Int?
     var followersCount: Int?
     var followingsCount: Int?
+    
+    override func mapping(map: Map) {
+        super.mapping(map: map)
+        avatarUrl <- map["avatar_url"]
+        username <- map["username"]
+    }
 }

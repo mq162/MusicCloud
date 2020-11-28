@@ -12,5 +12,5 @@ struct Comment: Codable {
     var body: String?
     var timestamp: Int?
     var id: Int?
-    var user: User?
+    //var user: User?
 }

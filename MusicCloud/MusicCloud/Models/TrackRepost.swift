@@ -9,7 +9,7 @@ import Foundation
 
 struct TrackRepost: Codable {
     var type: String?
-    var user: User?
+    //var user: User?
     var artwork_url: String?
     var waveform_url: String?
     var title: String?
