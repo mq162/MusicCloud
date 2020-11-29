@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabbarVC" customModule="MusicCloud" customModuleProvider="target">
+            <connections>
+                <outlet property="tabBar" destination="Cz8-wt-0Jv" id="JMf-Ac-pYX"/>
+                <outlet property="tabBarContainer" destination="7g4-cI-sD4" id="UDf-Ve-dZT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContainer" destination="5iw-D5-9o5" id="jTz-fD-eJd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iw-D5-9o5" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7g4-cI-sD4" userLabel="Tabbar Container">
+                    <rect key="frame" x="0.0" y="813" width="414" height="83"/>
+                    <subviews>
+                        <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cz8-wt-0Jv">
+                            <rect key="frame" x="0.0" y="-34" width="414" height="49"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <items>
+                                <tabBarItem title="Stream" image="cloud" id="Ud8-wt-9uy"/>
+                                <tabBarItem tag="1" title="Search" image="search" id="sMh-bk-FZl"/>
+                                <tabBarItem tag="2" title="Playlists" image="infinity" catalog="system" id="oIq-Bc-TBk"/>
+                                <tabBarItem tag="3" title="History" image="history" id="Jdz-Ea-iHq"/>
+                                <tabBarItem tag="4" title="Profile" image="gender-neutral" id="YRy-do-ubi"/>
+                            </items>
+                        </tabBar>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Cz8-wt-0Jv" firstAttribute="leading" secondItem="7g4-cI-sD4" secondAttribute="leading" id="Tml-i4-Oz4"/>
+                        <constraint firstItem="Cz8-wt-0Jv" firstAttribute="top" secondItem="7g4-cI-sD4" secondAttribute="top" id="dFN-RA-Rvg"/>
+                        <constraint firstAttribute="trailing" secondItem="Cz8-wt-0Jv" secondAttribute="trailing" id="pss-bn-Opw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5iw-D5-9o5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4Q0-0f-ilk"/>
+                <constraint firstItem="7g4-cI-sD4" firstAttribute="top" secondItem="5iw-D5-9o5" secondAttribute="bottom" id="4XK-ey-kax"/>
+                <constraint firstItem="7g4-cI-sD4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7Wg-hS-BnP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Cz8-wt-0Jv" secondAttribute="bottom" id="P7g-nb-4u4"/>
+                <constraint firstAttribute="bottom" secondItem="7g4-cI-sD4" secondAttribute="bottom" id="Qw4-On-HpX"/>
+                <constraint firstItem="7g4-cI-sD4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Yl4-mc-wva"/>
+                <constraint firstItem="5iw-D5-9o5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="b0O-ZW-Kyr"/>
+                <constraint firstItem="5iw-D5-9o5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wAa-xD-nMF"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cloud" width="33" height="33"/>
+        <image name="gender-neutral" width="33" height="33"/>
+        <image name="history" width="33" height="33"/>
+        <image name="infinity" catalog="system" width="128" height="62"/>
+        <image name="search" width="33" height="33"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

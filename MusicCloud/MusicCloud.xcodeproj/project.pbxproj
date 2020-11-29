@@ -46,6 +46,14 @@
 		1830ADF62568CAA900E9695D /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830ADF52568CAA900E9695D /* TrackCell.xib */; };
 		188E3DEA256951EE0087EAAD /* GetListTrackNextPageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E3DE9256951EE0087EAAD /* GetListTrackNextPageAPI.swift */; };
 		188E3DEE25695E440087EAAD /* LoadingFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E3DED25695E440087EAAD /* LoadingFooterCell.swift */; };
+		188FC2E2257229A70079EBC2 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FC2E0257229A70079EBC2 /* TabbarVC.swift */; };
+		188FC2E3257229A70079EBC2 /* TabbarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FC2E1257229A70079EBC2 /* TabbarVC.xib */; };
+		188FC2EE257238F20079EBC2 /* Array+UIPropertyViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FC2ED257238F20079EBC2 /* Array+UIPropertyViewAnimator.swift */; };
+		188FC2F1257239260079EBC2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FC2F0257239260079EBC2 /* UIViewControllerExtension.swift */; };
+		188FC2F525723A040079EBC2 /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FC2F425723A040079EBC2 /* MiniPlayerView.swift */; };
+		188FC2F925723A110079EBC2 /* MiniPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FC2F825723A110079EBC2 /* MiniPlayerView.xib */; };
+		188FC2FE25723A400079EBC2 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FC2FC25723A400079EBC2 /* PlayerVC.swift */; };
+		188FC2FF25723A400079EBC2 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FC2FD25723A400079EBC2 /* PlayerVC.xib */; };
 		18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D589252568EA3800C5FCA3 /* TrackGridCell.swift */; };
 		18D589282568EA3800C5FCA3 /* TrackGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D589262568EA3800C5FCA3 /* TrackGridCell.xib */; };
 		18D5892D2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5892C2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift */; };
@@ -94,6 +102,14 @@
 		1830ADF52568CAA900E9695D /* TrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		188E3DE9256951EE0087EAAD /* GetListTrackNextPageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListTrackNextPageAPI.swift; sourceTree = "<group>"; };
 		188E3DED25695E440087EAAD /* LoadingFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterCell.swift; sourceTree = "<group>"; };
+		188FC2E0257229A70079EBC2 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		188FC2E1257229A70079EBC2 /* TabbarVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarVC.xib; sourceTree = "<group>"; };
+		188FC2ED257238F20079EBC2 /* Array+UIPropertyViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UIPropertyViewAnimator.swift"; sourceTree = "<group>"; };
+		188FC2F0257239260079EBC2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		188FC2F425723A040079EBC2 /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
+		188FC2F825723A110079EBC2 /* MiniPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniPlayerView.xib; sourceTree = "<group>"; };
+		188FC2FC25723A400079EBC2 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
+		188FC2FD25723A400079EBC2 /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
 		18D589252568EA3800C5FCA3 /* TrackGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackGridCell.swift; sourceTree = "<group>"; };
 		18D589262568EA3800C5FCA3 /* TrackGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackGridCell.xib; sourceTree = "<group>"; };
 		18D5892C2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewStyleEnum.swift; sourceTree = "<group>"; };
@@ -175,6 +191,8 @@
 		1830AD832568B3B900E9695D /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				188FC2DF2572297D0079EBC2 /* MainTabbar */,
+				188FC2FB25723A1E0079EBC2 /* Player */,
 				1830AD9F2568B45400E9695D /* Login */,
 				1830AD912568B42B00E9695D /* Stream */,
 				1830ADA12568B46700E9695D /* Playlist */,
@@ -189,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				1830ADC52568B8D600E9695D /* BaseView.swift */,
+				188FC2F3257239DF0079EBC2 /* MiniPlayer */,
 				1830ADEC2568C99300E9695D /* Cells */,
 			);
 			path = Views;
@@ -295,6 +314,8 @@
 			children = (
 				1830ADC12568B85D00E9695D /* UIViewExtension.swift */,
 				18D5893F2569057C00C5FCA3 /* UIImageViewExtension.swift */,
+				188FC2ED257238F20079EBC2 /* Array+UIPropertyViewAnimator.swift */,
+				188FC2F0257239260079EBC2 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -333,6 +354,33 @@
 				188E3DED25695E440087EAAD /* LoadingFooterCell.swift */,
 			);
 			path = LoadingFooter;
+			sourceTree = "<group>";
+		};
+		188FC2DF2572297D0079EBC2 /* MainTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				188FC2E0257229A70079EBC2 /* TabbarVC.swift */,
+				188FC2E1257229A70079EBC2 /* TabbarVC.xib */,
+			);
+			path = MainTabbar;
+			sourceTree = "<group>";
+		};
+		188FC2F3257239DF0079EBC2 /* MiniPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				188FC2F425723A040079EBC2 /* MiniPlayerView.swift */,
+				188FC2F825723A110079EBC2 /* MiniPlayerView.xib */,
+			);
+			path = MiniPlayer;
+			sourceTree = "<group>";
+		};
+		188FC2FB25723A1E0079EBC2 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				188FC2FC25723A400079EBC2 /* PlayerVC.swift */,
+				188FC2FD25723A400079EBC2 /* PlayerVC.xib */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		18D589222568EA1C00C5FCA3 /* Track */ = {
@@ -450,8 +498,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188FC2F925723A110079EBC2 /* MiniPlayerView.xib in Resources */,
 				1830AD612568B0EF00E9695D /* LaunchScreen.storyboard in Resources */,
+				188FC2E3257229A70079EBC2 /* TabbarVC.xib in Resources */,
 				18D589282568EA3800C5FCA3 /* TrackGridCell.xib in Resources */,
+				188FC2FF25723A400079EBC2 /* PlayerVC.xib in Resources */,
 				1830ADA92568B48800E9695D /* SearchVC.xib in Resources */,
 				1830AD8B2568B41800E9695D /* HistoryVC.xib in Resources */,
 				1830ADF62568CAA900E9695D /* TrackCell.xib in Resources */,
@@ -470,8 +521,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188FC2F525723A040079EBC2 /* MiniPlayerView.swift in Sources */,
 				1830ADC22568B85D00E9695D /* UIViewExtension.swift in Sources */,
 				1830ADAA2568B48800E9695D /* SearchVC.swift in Sources */,
+				188FC2E2257229A70079EBC2 /* TabbarVC.swift in Sources */,
 				1830AD9B2568B44A00E9695D /* ProfileVC.swift in Sources */,
 				1830ADBC2568B75500E9695D /* TrackRepost.swift in Sources */,
 				1830ADBE2568B75500E9695D /* Playlist.swift in Sources */,
@@ -481,8 +534,10 @@
 				1830ADD92568C11000E9695D /* APIServices.swift in Sources */,
 				1830ADB82568B75500E9695D /* User.swift in Sources */,
 				18D589322568FC1F00C5FCA3 /* GetListTrackRequestModel.swift in Sources */,
+				188FC2F1257239260079EBC2 /* UIViewControllerExtension.swift in Sources */,
 				18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */,
 				1830ADBA2568B75500E9695D /* Favorite.swift in Sources */,
+				188FC2FE25723A400079EBC2 /* PlayerVC.swift in Sources */,
 				1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */,
 				1830ADC92568B91F00E9695D /* Utils.swift in Sources */,
 				1830ADE62568C1D000E9695D /* BaseRequestModel.swift in Sources */,
@@ -499,6 +554,7 @@
 				18D589352568FC3C00C5FCA3 /* GetListTrackResponseModel.swift in Sources */,
 				1830ADE92568C29A00E9695D /* Constants.swift in Sources */,
 				188E3DEA256951EE0087EAAD /* GetListTrackNextPageAPI.swift in Sources */,
+				188FC2EE257238F20079EBC2 /* Array+UIPropertyViewAnimator.swift in Sources */,
 				1830ADBB2568B75500E9695D /* PlaylistRepost.swift in Sources */,
 				1830ADC62568B8D600E9695D /* BaseView.swift in Sources */,
 				188E3DEE25695E440087EAAD /* LoadingFooterCell.swift in Sources */,

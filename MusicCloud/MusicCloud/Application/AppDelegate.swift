@@ -22,36 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.toolbarPreviousNextAllowedClasses = [UIStackView.self, UIView.self]
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        //Feed
-        let streamVC = StreamVC()
-        let streamNavi = UINavigationController(rootViewController: streamVC)
-        streamNavi.tabBarItem = UITabBarItem(title: "Stream", image: UIImage(named: "cloud"), tag: 0)
-        
-        //Search
-        let searchVC = SearchVC()
-        let searchNavi = UINavigationController(rootViewController: searchVC)
-        searchNavi.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "search"), tag: 2)
-        
-        //NewPost
-        let playlistVC = PlaylistVC()
-        let playlistNavi = UINavigationController(rootViewController: playlistVC)
-        playlistNavi.tabBarItem = UITabBarItem(title: "Playlists", image: UIImage(systemName: "infinity"), tag: 1)
-        
-        //Like
-        let historyVC = HistoryVC()
-        let historyNavi = UINavigationController(rootViewController: historyVC)
-        historyNavi.tabBarItem = UITabBarItem(title: "History", image: UIImage(named: "history"), tag: 3)
-        
-        //Profile
-        let profileVC = ProfileVC()
-        let profileNavi = UINavigationController(rootViewController: profileVC)
-        profileNavi.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "gender-neutral"), tag: 4)
-        
-        //tabbar controller
-        let tabbarController = UITabBarController()
-        tabbarController.delegate = self
-        tabbarController.viewControllers = [streamNavi, playlistNavi, searchNavi, historyNavi, profileNavi]
-        tabbarController.tabBar.tintColor = UIColor(red: 0.100, green: 0.771, blue: 0.530, alpha: 1.000)
+        let tabbarController = TabbarVC()
         
         window?.rootViewController = tabbarController
         window?.makeKeyAndVisible()
@@ -81,11 +52,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-}
-
-extension AppDelegate: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("Selected Tab : \(tabBarController.selectedIndex)")
     }
 }
