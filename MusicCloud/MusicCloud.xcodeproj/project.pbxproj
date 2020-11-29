@@ -44,6 +44,7 @@
 		1830ADE92568C29A00E9695D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADE82568C29A00E9695D /* Constants.swift */; };
 		1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADED2568CA0E00E9695D /* TrackCell.swift */; };
 		1830ADF62568CAA900E9695D /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830ADF52568CAA900E9695D /* TrackCell.xib */; };
+		1835B3DA257386A30053B8FF /* TransitionCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835B3D9257386A30053B8FF /* TransitionCordinator.swift */; };
 		188E3DEA256951EE0087EAAD /* GetListTrackNextPageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E3DE9256951EE0087EAAD /* GetListTrackNextPageAPI.swift */; };
 		188E3DEE25695E440087EAAD /* LoadingFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E3DED25695E440087EAAD /* LoadingFooterCell.swift */; };
 		188FC2E2257229A70079EBC2 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FC2E0257229A70079EBC2 /* TabbarVC.swift */; };
@@ -100,6 +101,7 @@
 		1830ADE82568C29A00E9695D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1830ADED2568CA0E00E9695D /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		1830ADF52568CAA900E9695D /* TrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		1835B3D9257386A30053B8FF /* TransitionCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCordinator.swift; sourceTree = "<group>"; };
 		188E3DE9256951EE0087EAAD /* GetListTrackNextPageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListTrackNextPageAPI.swift; sourceTree = "<group>"; };
 		188E3DED25695E440087EAAD /* LoadingFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterCell.swift; sourceTree = "<group>"; };
 		188FC2E0257229A70079EBC2 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				1830ADC82568B91F00E9695D /* Utils.swift */,
+				1835B3D9257386A30053B8FF /* TransitionCordinator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				1830ADC92568B91F00E9695D /* Utils.swift in Sources */,
 				1830ADE62568C1D000E9695D /* BaseRequestModel.swift in Sources */,
 				1830ADE22568C19B00E9695D /* BaseAPIProtocol.swift in Sources */,
+				1835B3DA257386A30053B8FF /* TransitionCordinator.swift in Sources */,
 				18D5893D2568FD7A00C5FCA3 /* BaseModel.swift in Sources */,
 				1830ADB92568B75500E9695D /* Track.swift in Sources */,
 				1830ADBD2568B75500E9695D /* Comment.swift in Sources */,

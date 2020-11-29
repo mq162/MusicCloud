@@ -10,12 +10,13 @@ import UIKit
 class TabbarVC: UIViewController {
 
     @IBOutlet private weak var viewContainer: UIView!
-    @IBOutlet private weak var tabBarContainer: UIView!
-    @IBOutlet private weak var tabBar: UITabBar!
+    @IBOutlet weak var tabBarContainer: UIView!
+    @IBOutlet weak var tabBar: UITabBar!
     private var viewControllers = [UIViewController]()
     private lazy var playerViewController = PlayerVC()
+    private var coordinator: TransitionCoordinator!
     
-    private var shouldHideStatusBar: Bool = false
+    var shouldHideStatusBar: Bool = false
     private var previousIndex = 0
     private var activeIndex = 0
     
@@ -27,12 +28,28 @@ class TabbarVC: UIViewController {
         self.tabBar.delegate = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let additionalBottomInset = tabBar.bounds.height
+        playerViewController.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: additionalBottomInset, right: 0)
+        coordinator = TransitionCoordinator(tabBarViewController: self, playerViewController: playerViewController)
+    }
+    
     override var prefersStatusBarHidden: Bool {
         return shouldHideStatusBar
     }
     
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
+    }
+    
     private func setupTabItems() {
-        let streamVC = StreamVC().addToNavigationController()
+        let stream = StreamVC()
+        stream.onClickSong = { [weak self] in
+            guard let weakSelf = self else { return }
+            self?.add(weakSelf.playerViewController)
+        }
+        let streamVC = stream.addToNavigationController()
         let searchVC = SearchVC().addToNavigationController()
         let playlistVC = PlaylistVC().addToNavigationController()
         let historyVC = HistoryVC().addToNavigationController()

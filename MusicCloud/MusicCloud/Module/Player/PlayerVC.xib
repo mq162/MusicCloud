@@ -1,22 +1,74 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVC" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVC" customModule="MusicCloud" customModuleProvider="target">
             <connections>
+                <outlet property="miniPlayerView" destination="yQi-lY-88h" id="uk3-2e-Kph"/>
+                <outlet property="playerView" destination="rnx-rt-UoW" id="2zt-wS-tyf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnx-rt-UoW" userLabel="Player View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOa-JP-qU2">
+                            <rect key="frame" x="23" y="75" width="17" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="arrow.down" catalog="system"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xz9-BK-aYi">
+                            <rect key="frame" x="367" y="70" width="33" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="more"/>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="ZgQ-fS-25Y"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQi-lY-88h" userLabel="Mini View" customClass="MiniPlayerView" customModule="MusicCloud" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="fqx-rP-OXR"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="yQi-lY-88h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="G5i-bz-sLG"/>
+                <constraint firstAttribute="bottom" secondItem="rnx-rt-UoW" secondAttribute="bottom" id="Ikh-h4-Bwo"/>
+                <constraint firstItem="rnx-rt-UoW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wtg-Ex-ZgH"/>
+                <constraint firstItem="rnx-rt-UoW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YKk-eh-dq0"/>
+                <constraint firstItem="yQi-lY-88h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dyn-uY-13A"/>
+                <constraint firstItem="rnx-rt-UoW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="w59-i2-ysR"/>
+                <constraint firstItem="yQi-lY-88h" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="yYl-cl-OQN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </view>
     </objects>
+    <resources>
+        <image name="arrow.down" catalog="system" width="120" height="128"/>
+        <image name="more" width="33" height="33"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

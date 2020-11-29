@@ -20,6 +20,7 @@ class StreamVC: UIViewController {
     private var nextUrl = ""
     private var isLoading: Bool = false
     private var gridStyle: Bool = true
+    var onClickSong: (() -> Void)?
     
     private lazy var gridButton: UIBarButtonItem = {
         let button = UIBarButtonItem(image: UIImage(systemName: "square.grid.3x3.fill"),
@@ -61,6 +62,7 @@ class StreamVC: UIViewController {
     
     @objc private func addTapped() {
         requestTrack()
+        onClickSong?()
     }
     
     @objc private func searchTapped(){

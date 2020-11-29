@@ -9,6 +9,9 @@ import UIKit
 
 class PlayerVC: UIViewController {
 
+    @IBOutlet weak var playerView: UIView!
+    @IBOutlet weak var miniPlayerView: MiniPlayerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
