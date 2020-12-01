@@ -12,6 +12,7 @@ class TabbarVC: UIViewController {
     @IBOutlet private weak var viewContainer: UIView!
     @IBOutlet weak var tabBarContainer: UIView!
     @IBOutlet weak var tabBar: UITabBar!
+    
     private var viewControllers = [UIViewController]()
     private lazy var playerViewController = PlayerVC()
     private var coordinator: TransitionCoordinator!
@@ -24,6 +25,7 @@ class TabbarVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupTabItems()
+        add(playerViewController)
         view.bringSubviewToFront(tabBarContainer)
         self.tabBar.delegate = self
     }
@@ -44,12 +46,7 @@ class TabbarVC: UIViewController {
     }
     
     private func setupTabItems() {
-        let stream = StreamVC()
-        stream.onClickSong = { [weak self] in
-            guard let weakSelf = self else { return }
-            self?.add(weakSelf.playerViewController)
-        }
-        let streamVC = stream.addToNavigationController()
+        let streamVC = StreamVC().addToNavigationController()
         let searchVC = SearchVC().addToNavigationController()
         let playlistVC = PlaylistVC().addToNavigationController()
         let historyVC = HistoryVC().addToNavigationController()

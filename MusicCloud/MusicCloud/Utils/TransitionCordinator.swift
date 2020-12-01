@@ -23,8 +23,10 @@ class TransitionCoordinator: NSObject {
     
     private lazy var panGestureRecognizer = createPanGestureRecognizer()
     private lazy var tapGestureRecognizer = createTapGestureRecognizer()
+    
     private var runningAnimators = [UIViewPropertyAnimator]()
     private var state: State = .closed
+    
     private var totalAnimationDistance: CGFloat {
         guard let playerViewController = playerViewController else { return 0 }
         return playerViewController.view.bounds.height - playerViewController.view.safeAreaInsets.bottom - playerViewController.miniPlayerView.bounds.height
@@ -37,6 +39,9 @@ class TransitionCoordinator: NSObject {
         playerViewController.view.addGestureRecognizer(panGestureRecognizer)
         playerViewController.view.addGestureRecognizer(tapGestureRecognizer)
         updateUI(with: state)
+        playerViewController.onTappedClose = { [weak self] in
+            self?.animateTransition(for: .closed)
+        }
     }
 }
 
@@ -105,17 +110,17 @@ extension TransitionCoordinator {
 }
 
 extension TransitionCoordinator: UIGestureRecognizerDelegate {
+    
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         guard let tapGestureRecognizer = gestureRecognizer as? UITapGestureRecognizer else { return runningAnimators.isEmpty }
 
-        guard let miniPlayerView = playerViewController.miniPlayerView,
-           // let closeButton = playerViewController.closeButton,
-            let view = playerViewController.view else { return false }
-
-        let tapLocation = tapGestureRecognizer.location(in: view)
-        //let closeButtonFrame = closeButton.convert(closeButton.frame, to: view).insetBy(dx: -8, dy: -8)
+        guard let miniPlayerView = playerViewController.miniPlayerView, let view = playerViewController.view else { return false }
         
-        return runningAnimators.isEmpty && (miniPlayerView.frame.contains(tapLocation)) //|| closeButtonFrame.contains(tapLocation))
+        // get the tapped location
+        let tapLocation = tapGestureRecognizer.location(in: view)
+        
+        // begin tap gesture when user tap on mini player
+        return runningAnimators.isEmpty && (miniPlayerView.frame.contains(tapLocation)) && state == .closed
     }
 
     private func createPanGestureRecognizer() -> UIPanGestureRecognizer {
@@ -131,7 +136,6 @@ extension TransitionCoordinator: UIGestureRecognizerDelegate {
         recognizer.delegate = self
         return recognizer
     }
-
 }
 
 // MARK: Animators
@@ -255,20 +259,15 @@ extension TransitionCoordinator {
         playerViewController?.miniPlayerView.alpha = state == .open ? 0 : 1
     }
     
-    
-
     private func updatePlayer(with state: State) {
-        guard let playerViewController = playerViewController,
-            let tabBarViewController = tabBarViewController else { return }
+        guard let playerViewController = playerViewController else { return }
 
         playerViewController.playerView.alpha = state == .open ? 1 : 0
-        playerViewController.view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        let cornerRadius: CGFloat = playerViewController.view.safeAreaInsets.bottom > tabBarViewController.tabBar.bounds.height ? 20 : 0
-        playerViewController.view.layer.cornerRadius = state == .open ? cornerRadius : 0
+        playerViewController.playerView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        playerViewController.playerView.layer.cornerRadius = state == .open ? 20 : 0
     }
 
     private func updatePlayerContainer(with state: State) {
         playerViewController?.view.transform = state == .open ? .identity : CGAffineTransform(translationX: 0, y: totalAnimationDistance)
     }
 }
-

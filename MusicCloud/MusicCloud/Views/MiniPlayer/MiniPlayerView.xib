@@ -34,19 +34,19 @@
                         <constraint firstAttribute="height" constant="0.5" id="0ra-Uf-XtT"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dey-1A-kQa">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dey-1A-kQa" userLabel="Song Label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
                     <rect key="frame" x="78.5" y="7" width="249" height="24"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXK-Kb-pph">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXK-Kb-pph" userLabel="Artist Label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
                     <rect key="frame" x="78.5" y="31" width="249" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhq-XV-GGs">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhq-XV-GGs" userLabel="Button Play">
                     <rect key="frame" x="347.5" y="2" width="68.5" height="68.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Hhq-XV-GGs" secondAttribute="height" multiplier="1:1" id="82V-Lk-D6J"/>
@@ -92,6 +92,14 @@
             <point key="canvasLocation" x="-88.125" y="-240.31690140845072"/>
         </view>
     </objects>
+    <designables>
+        <designable name="Dey-1A-kQa">
+            <size key="intrinsicContentSize" width="51.5" height="24"/>
+        </designable>
+        <designable name="yXK-Kb-pph">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="background-image" width="951" height="989"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>

@@ -55,6 +55,7 @@
 		188FC2F925723A110079EBC2 /* MiniPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FC2F825723A110079EBC2 /* MiniPlayerView.xib */; };
 		188FC2FE25723A400079EBC2 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FC2FC25723A400079EBC2 /* PlayerVC.swift */; };
 		188FC2FF25723A400079EBC2 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FC2FD25723A400079EBC2 /* PlayerVC.xib */; };
+		18B94B1E257635D1006571A3 /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B94B1D257635D1006571A3 /* MarqueeLabel.swift */; };
 		18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D589252568EA3800C5FCA3 /* TrackGridCell.swift */; };
 		18D589282568EA3800C5FCA3 /* TrackGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D589262568EA3800C5FCA3 /* TrackGridCell.xib */; };
 		18D5892D2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5892C2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift */; };
@@ -112,6 +113,7 @@
 		188FC2F825723A110079EBC2 /* MiniPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniPlayerView.xib; sourceTree = "<group>"; };
 		188FC2FC25723A400079EBC2 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		188FC2FD25723A400079EBC2 /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
+		18B94B1D257635D1006571A3 /* MarqueeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
 		18D589252568EA3800C5FCA3 /* TrackGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackGridCell.swift; sourceTree = "<group>"; };
 		18D589262568EA3800C5FCA3 /* TrackGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackGridCell.xib; sourceTree = "<group>"; };
 		18D5892C2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewStyleEnum.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				1830ADC52568B8D600E9695D /* BaseView.swift */,
+				18B94B1C257635B7006571A3 /* MarqueeLabel */,
 				188FC2F3257239DF0079EBC2 /* MiniPlayer */,
 				1830ADEC2568C99300E9695D /* Cells */,
 			);
@@ -386,6 +389,14 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
+		18B94B1C257635B7006571A3 /* MarqueeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				18B94B1D257635D1006571A3 /* MarqueeLabel.swift */,
+			);
+			path = MarqueeLabel;
+			sourceTree = "<group>";
+		};
 		18D589222568EA1C00C5FCA3 /* Track */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +550,7 @@
 				18D589322568FC1F00C5FCA3 /* GetListTrackRequestModel.swift in Sources */,
 				188FC2F1257239260079EBC2 /* UIViewControllerExtension.swift in Sources */,
 				18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */,
+				18B94B1E257635D1006571A3 /* MarqueeLabel.swift in Sources */,
 				1830ADBA2568B75500E9695D /* Favorite.swift in Sources */,
 				188FC2FE25723A400079EBC2 /* PlayerVC.swift in Sources */,
 				1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */,
