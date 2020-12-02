@@ -73,6 +73,11 @@ extension UIView {
         self.layer.shouldRasterize = true
         self.layer.rasterizationScale = UIScreen.main.scale
     }
+    
+    func circularize() {
+        clipsToBounds = true
+        layer.cornerRadius = bounds.width / 2
+    }
 
     func fillLayoutInView(view: UIView, constant: CGFloat = 0) {
         self.translatesAutoresizingMaskIntoConstraints = false

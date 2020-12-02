@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1803C33625777E29004D9263 /* ComparableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803C33525777E29004D9263 /* ComparableExtension.swift */; };
+		1803C33925777E6F004D9263 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803C33825777E6F004D9263 /* UINavigationControllerExtension.swift */; };
+		1803C33F2577855C004D9263 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830AD9D2568B44D00E9695D /* ProfileVC.xib */; };
+		1803C34525779BD7004D9263 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803C34425779BD7004D9263 /* UserStatView.swift */; };
 		1830AD552568B0EB00E9695D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830AD542568B0EB00E9695D /* AppDelegate.swift */; };
 		1830AD5C2568B0EB00E9695D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1830AD5A2568B0EB00E9695D /* Main.storyboard */; };
 		1830AD5E2568B0EF00E9695D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1830AD5D2568B0EF00E9695D /* Assets.xcassets */; };
@@ -67,6 +71,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1803C33525777E29004D9263 /* ComparableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtension.swift; sourceTree = "<group>"; };
+		1803C33825777E6F004D9263 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		1803C34425779BD7004D9263 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 		1830AD512568B0EB00E9695D /* MusicCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1830AD542568B0EB00E9695D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1830AD5B2568B0EB00E9695D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +147,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1803C34325779BA0004D9263 /* UserStatView */ = {
+			isa = PBXGroup;
+			children = (
+				1803C34425779BD7004D9263 /* UserStatView.swift */,
+			);
+			path = UserStatView;
+			sourceTree = "<group>";
+		};
 		1830AD482568B0EB00E9695D = {
 			isa = PBXGroup;
 			children = (
@@ -201,8 +216,8 @@
 				1830AD912568B42B00E9695D /* Stream */,
 				1830ADA12568B46700E9695D /* Playlist */,
 				1830ADA02568B46100E9695D /* Search */,
-				1830AD902568B42500E9695D /* Profile */,
 				1830AD8E2568B41E00E9695D /* History */,
+				1830AD902568B42500E9695D /* Profile */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -211,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				1830ADC52568B8D600E9695D /* BaseView.swift */,
+				1803C34325779BA0004D9263 /* UserStatView */,
 				18B94B1C257635B7006571A3 /* MarqueeLabel */,
 				188FC2F3257239DF0079EBC2 /* MiniPlayer */,
 				1830ADEC2568C99300E9695D /* Cells */,
@@ -322,6 +338,8 @@
 				18D5893F2569057C00C5FCA3 /* UIImageViewExtension.swift */,
 				188FC2ED257238F20079EBC2 /* Array+UIPropertyViewAnimator.swift */,
 				188FC2F0257239260079EBC2 /* UIViewControllerExtension.swift */,
+				1803C33525777E29004D9263 /* ComparableExtension.swift */,
+				1803C33825777E6F004D9263 /* UINavigationControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -516,6 +534,7 @@
 				1830AD612568B0EF00E9695D /* LaunchScreen.storyboard in Resources */,
 				188FC2E3257229A70079EBC2 /* TabbarVC.xib in Resources */,
 				18D589282568EA3800C5FCA3 /* TrackGridCell.xib in Resources */,
+				1803C33F2577855C004D9263 /* ProfileVC.xib in Resources */,
 				188FC2FF25723A400079EBC2 /* PlayerVC.xib in Resources */,
 				1830ADA92568B48800E9695D /* SearchVC.xib in Resources */,
 				1830AD8B2568B41800E9695D /* HistoryVC.xib in Resources */,
@@ -546,11 +565,13 @@
 				1830AD552568B0EB00E9695D /* AppDelegate.swift in Sources */,
 				18D5892D2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift in Sources */,
 				1830ADD92568C11000E9695D /* APIServices.swift in Sources */,
+				1803C33925777E6F004D9263 /* UINavigationControllerExtension.swift in Sources */,
 				1830ADB82568B75500E9695D /* User.swift in Sources */,
 				18D589322568FC1F00C5FCA3 /* GetListTrackRequestModel.swift in Sources */,
 				188FC2F1257239260079EBC2 /* UIViewControllerExtension.swift in Sources */,
 				18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */,
 				18B94B1E257635D1006571A3 /* MarqueeLabel.swift in Sources */,
+				1803C34525779BD7004D9263 /* UserStatView.swift in Sources */,
 				1830ADBA2568B75500E9695D /* Favorite.swift in Sources */,
 				188FC2FE25723A400079EBC2 /* PlayerVC.swift in Sources */,
 				1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */,
@@ -558,6 +579,7 @@
 				1830ADE62568C1D000E9695D /* BaseRequestModel.swift in Sources */,
 				1830ADE22568C19B00E9695D /* BaseAPIProtocol.swift in Sources */,
 				1835B3DA257386A30053B8FF /* TransitionCordinator.swift in Sources */,
+				1803C33625777E29004D9263 /* ComparableExtension.swift in Sources */,
 				18D5893D2568FD7A00C5FCA3 /* BaseModel.swift in Sources */,
 				1830ADB92568B75500E9695D /* Track.swift in Sources */,
 				1830ADBD2568B75500E9695D /* Comment.swift in Sources */,
