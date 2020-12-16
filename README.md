@@ -1,6 +1,3 @@
 # MusicCloud
 
-cocoapod
-realm
-alamorefire
 
