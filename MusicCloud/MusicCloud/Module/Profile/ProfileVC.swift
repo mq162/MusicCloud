@@ -21,8 +21,28 @@ class ProfileVC: UIViewController {
     @IBOutlet private weak var profileImageContainerView: UIView!
     @IBOutlet private weak var profileImageContainerViewWidth: NSLayoutConstraint!
     
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var customSegmented: CustomSegmentedControl!
+    
+    let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+    
+    lazy var collectionView:UICollectionView = {
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
+        cv.delegate = self
+        cv.dataSource = self
+        cv.showsHorizontalScrollIndicator = false
+        cv.register(TabDetailContentCollectionViewCell.self, forCellWithReuseIdentifier: "TabDetailContentCollectionViewCell")
+        cv.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.setCollectionViewLayout(layout, animated: false)
+        cv.backgroundColor = .clear
+        cv.isPagingEnabled = true
+        return cv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        customSegmented.delegate = self
         navigationController?.makeTransparent()
         usernameLabel.text = "Quang Pham"
         headerUsernameLabel.text = "Quang Pham"
@@ -31,6 +51,18 @@ class ProfileVC: UIViewController {
         headerImageView.image = #imageLiteral(resourceName: "background-image")
         headerBlurView.alpha = 0.0
         scrollView.delegate = self
+        setupTab()
+    }
+    
+    func setupTab() {
+        layout.scrollDirection = .horizontal
+        contentView.addSubview(collectionView)
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: customSegmented.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
     }
 }
 
@@ -55,7 +87,54 @@ extension ProfileVC: UIScrollViewDelegate {
         
         headerBlurView.alpha = ((scrollView.contentOffset.y - 40) / headerBackView.frame.height)
             .clamp(to: (0.0...1.0))
+        
+        
+        if scrollView.contentOffset.y > 250 {
+                scrollView.contentOffset.y = 250
+             }
+        
+        let x = scrollView.contentOffset.x / CGFloat(customSegmented.tabArr.count)
+        customSegmented.trackViewLeadingAnchor?.constant = x
     }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        print(velocity)
+        let i = Int(targetContentOffset.pointee.x / collectionView.frame.width)
+        let indexPath = IndexPath(item: i, section: 0)
+        customSegmented.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+    }
+}
+
+extension ProfileVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return customSegmented.tabArr.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabDetailContentCollectionViewCell", for: indexPath) as! TabDetailContentCollectionViewCell
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width:collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+}
+
+extension ProfileVC: SegmentedActivityDelegate {
+    func scrollTo(index: Int) {
+        let indexPath = IndexPath(item: index, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+    
 }
 
 extension ProfileVC {

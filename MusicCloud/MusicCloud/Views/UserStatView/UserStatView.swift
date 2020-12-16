@@ -31,10 +31,10 @@ import UIKit
         
         //Stack View
         let stackView = UIStackView()
-        stackView.axis = NSLayoutConstraint.Axis.vertical
-        stackView.distribution  = UIStackView.Distribution.equalSpacing
-        stackView.alignment = UIStackView.Alignment.center
-        stackView.spacing   = 5
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.alignment = .center
+        stackView.spacing = 5
 
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(statLabel)

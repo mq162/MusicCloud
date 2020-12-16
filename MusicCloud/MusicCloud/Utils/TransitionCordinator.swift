@@ -112,15 +112,18 @@ extension TransitionCoordinator {
 extension TransitionCoordinator: UIGestureRecognizerDelegate {
     
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        guard let tapGestureRecognizer = gestureRecognizer as? UITapGestureRecognizer else { return runningAnimators.isEmpty }
-
-        guard let miniPlayerView = playerViewController.miniPlayerView, let view = playerViewController.view else { return false }
-        
-        // get the tapped location
-        let tapLocation = tapGestureRecognizer.location(in: view)
-        
-        // begin tap gesture when user tap on mini player
-        return runningAnimators.isEmpty && (miniPlayerView.frame.contains(tapLocation)) && state == .closed
+        if gestureRecognizer is UITapGestureRecognizer {
+            guard let miniPlayerView = playerViewController.miniPlayerView,
+                  let view = playerViewController.view else { return false }
+            
+            let tapLocation = gestureRecognizer.location(in: view)
+            return runningAnimators.isEmpty && (miniPlayerView.frame.contains(tapLocation)) && state == .closed
+        } else if let panGesture = gestureRecognizer as? UIPanGestureRecognizer {
+            let velocity = panGesture.velocity(in: panGesture.view)
+            return abs(velocity.x) < abs(velocity.y) && runningAnimators.isEmpty
+        } else {
+            return false
+        }
     }
 
     private func createPanGestureRecognizer() -> UIPanGestureRecognizer {

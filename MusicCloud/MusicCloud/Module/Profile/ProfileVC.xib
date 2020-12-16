@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="MusicCloud" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="34X-Vr-VAJ" id="V8O-yr-W9j"/>
+                <outlet property="customSegmented" destination="rcS-HU-xoc" id="0Bz-bV-yI1"/>
                 <outlet property="descriptionLabel" destination="bB9-Fo-p1H" id="SvG-uZ-Zli"/>
                 <outlet property="headerBackView" destination="k9z-70-Ud6" id="1Ic-Dx-Qzq"/>
                 <outlet property="headerBlurView" destination="yFE-Xb-IPc" id="ae9-Cx-kbm"/>
@@ -34,7 +36,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="QP4-Hz-GDy">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="QP4-Hz-GDy">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36A-kf-KIg" userLabel="Image Container">
@@ -45,7 +47,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpE-lE-Ibl" userLabel="Header View">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="125.5"/>
+                            <rect key="frame" x="0.0" y="173.5" width="414" height="125.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5t0-GT-qhF" userLabel="Header Image View">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="125.5"/>
@@ -59,7 +61,7 @@
                                     <blurEffect style="regular"/>
                                 </visualEffectView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80E-W9-hWK" userLabel="Title Container">
-                                    <rect key="frame" x="107" y="197.5" width="200" height="26"/>
+                                    <rect key="frame" x="107" y="99.5" width="200" height="26"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4i-a5-W8F" userLabel="Header Username Label">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="18"/>
@@ -137,13 +139,6 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGf-38-dOC" userLabel="Divider View">
-                            <rect key="frame" x="8" y="440.5" width="398" height="1"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1" id="SSw-xJ-gdQ"/>
-                            </constraints>
-                        </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nHo-Vg-MtX" userLabel="Stat Stack View">
                             <rect key="frame" x="0.0" y="280.5" width="414" height="60"/>
                             <subviews>
@@ -174,10 +169,22 @@
                             </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34X-Vr-VAJ" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="441.5" width="414" height="800"/>
+                            <rect key="frame" x="0.0" y="350.5" width="414" height="800"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcS-HU-xoc" customClass="CustomSegmentedControl" customModule="MusicCloud" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="W2R-CW-wqB"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="rcS-HU-xoc" firstAttribute="top" secondItem="34X-Vr-VAJ" secondAttribute="top" id="26l-Qm-zWf"/>
                                 <constraint firstAttribute="height" constant="800" id="S0g-og-TKi"/>
+                                <constraint firstItem="rcS-HU-xoc" firstAttribute="leading" secondItem="34X-Vr-VAJ" secondAttribute="leading" id="Ylh-fy-O2W"/>
+                                <constraint firstAttribute="trailing" secondItem="rcS-HU-xoc" secondAttribute="trailing" id="wom-Dl-hLn"/>
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jM1-j9-pEB">
@@ -198,20 +205,17 @@
                         <constraint firstItem="36A-kf-KIg" firstAttribute="top" secondItem="QP4-Hz-GDy" secondAttribute="top" id="5HR-dP-Fps"/>
                         <constraint firstItem="GpE-lE-Ibl" firstAttribute="bottom" secondItem="36A-kf-KIg" secondAttribute="bottom" priority="750" id="6BY-AA-7fv"/>
                         <constraint firstItem="67P-ZT-M6P" firstAttribute="top" secondItem="egC-LI-d0Z" secondAttribute="bottom" constant="8" id="6Kp-z1-cfG"/>
-                        <constraint firstItem="34X-Vr-VAJ" firstAttribute="top" secondItem="vGf-38-dOC" secondAttribute="bottom" id="7E7-xX-bxh"/>
-                        <constraint firstAttribute="trailing" secondItem="vGf-38-dOC" secondAttribute="trailing" constant="8" id="7fM-8d-o1q"/>
                         <constraint firstAttribute="trailing" secondItem="36A-kf-KIg" secondAttribute="trailing" id="9es-2w-od0"/>
+                        <constraint firstItem="34X-Vr-VAJ" firstAttribute="top" secondItem="nHo-Vg-MtX" secondAttribute="bottom" constant="10" id="C65-xB-HxT"/>
                         <constraint firstItem="34X-Vr-VAJ" firstAttribute="leading" secondItem="QP4-Hz-GDy" secondAttribute="leading" id="CHt-Md-cLJ"/>
                         <constraint firstItem="jM1-j9-pEB" firstAttribute="centerX" secondItem="QP4-Hz-GDy" secondAttribute="centerX" id="L0L-tp-NHY"/>
                         <constraint firstAttribute="trailing" secondItem="nHo-Vg-MtX" secondAttribute="trailing" id="LbI-bP-sQd"/>
-                        <constraint firstItem="vGf-38-dOC" firstAttribute="top" secondItem="nHo-Vg-MtX" secondAttribute="bottom" constant="100" id="P40-ad-uMN"/>
                         <constraint firstItem="67P-ZT-M6P" firstAttribute="leading" secondItem="QP4-Hz-GDy" secondAttribute="leading" constant="16" id="RJa-W5-Cb6"/>
                         <constraint firstAttribute="bottom" secondItem="34X-Vr-VAJ" secondAttribute="bottom" constant="20" id="S0u-UH-CpT"/>
                         <constraint firstItem="egC-LI-d0Z" firstAttribute="centerX" secondItem="QP4-Hz-GDy" secondAttribute="centerX" id="WHG-uI-U1C"/>
                         <constraint firstItem="GpE-lE-Ibl" firstAttribute="trailing" secondItem="36A-kf-KIg" secondAttribute="trailing" id="Z4v-5E-a5Y"/>
                         <constraint firstAttribute="trailing" secondItem="67P-ZT-M6P" secondAttribute="trailing" constant="16" id="Z6i-uE-Tcb"/>
                         <constraint firstItem="GpE-lE-Ibl" firstAttribute="leading" secondItem="36A-kf-KIg" secondAttribute="leading" id="ZPT-Gq-knD"/>
-                        <constraint firstItem="vGf-38-dOC" firstAttribute="leading" secondItem="QP4-Hz-GDy" secondAttribute="leading" constant="8" id="b2q-ee-MfI"/>
                         <constraint firstItem="GpE-lE-Ibl" firstAttribute="height" relation="greaterThanOrEqual" secondItem="36A-kf-KIg" secondAttribute="height" id="bgW-va-mjl"/>
                         <constraint firstItem="nHo-Vg-MtX" firstAttribute="top" secondItem="jM1-j9-pEB" secondAttribute="bottom" constant="10" id="eP1-Oo-bz3"/>
                         <constraint firstItem="80E-W9-hWK" firstAttribute="bottom" secondItem="36A-kf-KIg" secondAttribute="bottom" priority="750" constant="98" id="eap-JI-Gpf"/>

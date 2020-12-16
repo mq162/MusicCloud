@@ -49,6 +49,9 @@
 		1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADED2568CA0E00E9695D /* TrackCell.swift */; };
 		1830ADF62568CAA900E9695D /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830ADF52568CAA900E9695D /* TrackCell.xib */; };
 		1835B3DA257386A30053B8FF /* TransitionCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835B3D9257386A30053B8FF /* TransitionCordinator.swift */; };
+		187002DA257DD8D700388289 /* SegmentTabContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187002D9257DD8D700388289 /* SegmentTabContentCell.swift */; };
+		187002DE257DD8FA00388289 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187002DD257DD8FA00388289 /* DemoCell.swift */; };
+		187002E2257DDF6300388289 /* ProfileTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187002E1257DDF6300388289 /* ProfileTabView.swift */; };
 		188E3DEA256951EE0087EAAD /* GetListTrackNextPageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E3DE9256951EE0087EAAD /* GetListTrackNextPageAPI.swift */; };
 		188E3DEE25695E440087EAAD /* LoadingFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E3DED25695E440087EAAD /* LoadingFooterCell.swift */; };
 		188FC2E2257229A70079EBC2 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FC2E0257229A70079EBC2 /* TabbarVC.swift */; };
@@ -68,6 +71,9 @@
 		18D5893A2568FC6400C5FCA3 /* GetListTrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D589392568FC6400C5FCA3 /* GetListTrackAPI.swift */; };
 		18D5893D2568FD7A00C5FCA3 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5893C2568FD7A00C5FCA3 /* BaseModel.swift */; };
 		18D589402569057C00C5FCA3 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5893F2569057C00C5FCA3 /* UIImageViewExtension.swift */; };
+		18D92B42257A263B00162881 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B41257A263B00162881 /* UIImageExtension.swift */; };
+		18D92B52257A387C00162881 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B51257A387C00162881 /* CustomSegmentControl.swift */; };
+		18D92B66257A465400162881 /* SegmentedTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B65257A465400162881 /* SegmentedTabCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +116,9 @@
 		1830ADED2568CA0E00E9695D /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		1830ADF52568CAA900E9695D /* TrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		1835B3D9257386A30053B8FF /* TransitionCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCordinator.swift; sourceTree = "<group>"; };
+		187002D9257DD8D700388289 /* SegmentTabContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentTabContentCell.swift; sourceTree = "<group>"; };
+		187002DD257DD8FA00388289 /* DemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
+		187002E1257DDF6300388289 /* ProfileTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabView.swift; sourceTree = "<group>"; };
 		188E3DE9256951EE0087EAAD /* GetListTrackNextPageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListTrackNextPageAPI.swift; sourceTree = "<group>"; };
 		188E3DED25695E440087EAAD /* LoadingFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterCell.swift; sourceTree = "<group>"; };
 		188FC2E0257229A70079EBC2 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
@@ -129,6 +138,9 @@
 		18D589392568FC6400C5FCA3 /* GetListTrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListTrackAPI.swift; sourceTree = "<group>"; };
 		18D5893C2568FD7A00C5FCA3 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		18D5893F2569057C00C5FCA3 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		18D92B41257A263B00162881 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		18D92B51257A387C00162881 /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
+		18D92B65257A465400162881 /* SegmentedTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedTabCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +237,9 @@
 		1830AD842568B3C200E9695D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				187002E0257DDF3A00388289 /* ProfileTabView */,
 				1830ADC52568B8D600E9695D /* BaseView.swift */,
+				18D92B50257A386200162881 /* CustomSegment */,
 				1803C34325779BA0004D9263 /* UserStatView */,
 				18B94B1C257635B7006571A3 /* MarqueeLabel */,
 				188FC2F3257239DF0079EBC2 /* MiniPlayer */,
@@ -340,6 +354,7 @@
 				188FC2F0257239260079EBC2 /* UIViewControllerExtension.swift */,
 				1803C33525777E29004D9263 /* ComparableExtension.swift */,
 				1803C33825777E6F004D9263 /* UINavigationControllerExtension.swift */,
+				18D92B41257A263B00162881 /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -365,11 +380,20 @@
 		1830ADEC2568C99300E9695D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				18D92B64257A463700162881 /* Segmented */,
 				188E3DEC25695E310087EAAD /* LoadingFooter */,
 				18D589242568EA2300C5FCA3 /* TrackGrid */,
 				18D589222568EA1C00C5FCA3 /* Track */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		187002E0257DDF3A00388289 /* ProfileTabView */ = {
+			isa = PBXGroup;
+			children = (
+				187002E1257DDF6300388289 /* ProfileTabView.swift */,
+			);
+			path = ProfileTabView;
 			sourceTree = "<group>";
 		};
 		188E3DEC25695E310087EAAD /* LoadingFooter */ = {
@@ -457,6 +481,24 @@
 				188E3DE9256951EE0087EAAD /* GetListTrackNextPageAPI.swift */,
 			);
 			path = GetListTrackAPI;
+			sourceTree = "<group>";
+		};
+		18D92B50257A386200162881 /* CustomSegment */ = {
+			isa = PBXGroup;
+			children = (
+				18D92B51257A387C00162881 /* CustomSegmentControl.swift */,
+			);
+			path = CustomSegment;
+			sourceTree = "<group>";
+		};
+		18D92B64257A463700162881 /* Segmented */ = {
+			isa = PBXGroup;
+			children = (
+				18D92B65257A465400162881 /* SegmentedTabCell.swift */,
+				187002D9257DD8D700388289 /* SegmentTabContentCell.swift */,
+				187002DD257DD8FA00388289 /* DemoCell.swift */,
+			);
+			path = Segmented;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -565,11 +607,14 @@
 				1830AD552568B0EB00E9695D /* AppDelegate.swift in Sources */,
 				18D5892D2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift in Sources */,
 				1830ADD92568C11000E9695D /* APIServices.swift in Sources */,
+				187002DA257DD8D700388289 /* SegmentTabContentCell.swift in Sources */,
 				1803C33925777E6F004D9263 /* UINavigationControllerExtension.swift in Sources */,
+				18D92B66257A465400162881 /* SegmentedTabCell.swift in Sources */,
 				1830ADB82568B75500E9695D /* User.swift in Sources */,
 				18D589322568FC1F00C5FCA3 /* GetListTrackRequestModel.swift in Sources */,
 				188FC2F1257239260079EBC2 /* UIViewControllerExtension.swift in Sources */,
 				18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */,
+				18D92B52257A387C00162881 /* CustomSegmentControl.swift in Sources */,
 				18B94B1E257635D1006571A3 /* MarqueeLabel.swift in Sources */,
 				1803C34525779BD7004D9263 /* UserStatView.swift in Sources */,
 				1830ADBA2568B75500E9695D /* Favorite.swift in Sources */,
@@ -577,6 +622,7 @@
 				1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */,
 				1830ADC92568B91F00E9695D /* Utils.swift in Sources */,
 				1830ADE62568C1D000E9695D /* BaseRequestModel.swift in Sources */,
+				187002DE257DD8FA00388289 /* DemoCell.swift in Sources */,
 				1830ADE22568C19B00E9695D /* BaseAPIProtocol.swift in Sources */,
 				1835B3DA257386A30053B8FF /* TransitionCordinator.swift in Sources */,
 				1803C33625777E29004D9263 /* ComparableExtension.swift in Sources */,
@@ -584,11 +630,13 @@
 				1830ADB92568B75500E9695D /* Track.swift in Sources */,
 				1830ADBD2568B75500E9695D /* Comment.swift in Sources */,
 				18D589402569057C00C5FCA3 /* UIImageViewExtension.swift in Sources */,
+				187002E2257DDF6300388289 /* ProfileTabView.swift in Sources */,
 				1830AD8C2568B41800E9695D /* HistoryVC.swift in Sources */,
 				1830ADA42568B47500E9695D /* PlaylistVC.swift in Sources */,
 				1830ADDC2568C14F00E9695D /* HttpsRequest.swift in Sources */,
 				1830AD952568B43A00E9695D /* StreamVC.swift in Sources */,
 				18D5893A2568FC6400C5FCA3 /* GetListTrackAPI.swift in Sources */,
+				18D92B42257A263B00162881 /* UIImageExtension.swift in Sources */,
 				18D589352568FC3C00C5FCA3 /* GetListTrackResponseModel.swift in Sources */,
 				1830ADE92568C29A00E9695D /* Constants.swift in Sources */,
 				188E3DEA256951EE0087EAAD /* GetListTrackNextPageAPI.swift in Sources */,
