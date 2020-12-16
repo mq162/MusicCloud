@@ -1,1 +1,6 @@
 # MusicCloud
+
+cocoapod
+realm
+alamorefire
+
