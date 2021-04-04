@@ -11,5 +11,6 @@ class APIServices {
     static let serverSoundCloud = "https://api.soundcloud.com/"
     
     static let oAuthAPI = "oauth2/token"
+    static let meProfile = "me"
     static let listTrackAPI = "me/activities/tracks"
 }

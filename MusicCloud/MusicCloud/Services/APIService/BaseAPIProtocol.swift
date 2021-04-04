@@ -74,12 +74,11 @@ protocol BaseAuthAPIProtocol: BaseAPIProtocol {
 
 extension BaseAuthAPIProtocol {
     var headers: [String : String] {
-        let token = "1-109991-411639534-ccecca117d9fa"
-        return ["Authorization" : "OAuth \(token)"]
-//        if let token = "1-109991-411639534-ccecca117d9fa" {
-//            return ["Authorization" : "OAuth \(token)"]
-//        } else {
-//            return [:]
-//        }
+        let userDefault = UserDefaultUtils()
+        if let token = userDefault.stringValue(key: Constants.Key.ACCESS_TOKEN) {
+            return ["Authorization" : "OAuth \(token)"]
+        } else {
+            return headers
+        }
     }
 }

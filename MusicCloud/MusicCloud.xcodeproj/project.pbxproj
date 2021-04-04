@@ -51,6 +51,8 @@
 		1835B3DA257386A30053B8FF /* TransitionCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835B3D9257386A30053B8FF /* TransitionCordinator.swift */; };
 		186139AE26198F5700E3E7AE /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186139AD26198F5700E3E7AE /* UserDefaultUtils.swift */; };
 		186139C02619A17B00E3E7AE /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186139BF2619A17B00E3E7AE /* PopUpView.swift */; };
+		186139CB2619AB5400E3E7AE /* MeProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186139CA2619AB5400E3E7AE /* MeProfileResponse.swift */; };
+		186139D02619ACEB00E3E7AE /* MeProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186139CF2619ACEB00E3E7AE /* MeProfileAPI.swift */; };
 		187002DA257DD8D700388289 /* SegmentTabContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187002D9257DD8D700388289 /* SegmentTabContentCell.swift */; };
 		187002DE257DD8FA00388289 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187002DD257DD8FA00388289 /* DemoCell.swift */; };
 		187002E2257DDF6300388289 /* ProfileTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187002E1257DDF6300388289 /* ProfileTabView.swift */; };
@@ -123,6 +125,8 @@
 		1835B3D9257386A30053B8FF /* TransitionCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCordinator.swift; sourceTree = "<group>"; };
 		186139AD26198F5700E3E7AE /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
 		186139BF2619A17B00E3E7AE /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		186139CA2619AB5400E3E7AE /* MeProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeProfileResponse.swift; sourceTree = "<group>"; };
+		186139CF2619ACEB00E3E7AE /* MeProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeProfileAPI.swift; sourceTree = "<group>"; };
 		187002D9257DD8D700388289 /* SegmentTabContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentTabContentCell.swift; sourceTree = "<group>"; };
 		187002DD257DD8FA00388289 /* DemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
 		187002E1257DDF6300388289 /* ProfileTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabView.swift; sourceTree = "<group>"; };
@@ -374,6 +378,7 @@
 		1830ADDF2568C17A00E9695D /* RequestModel */ = {
 			isa = PBXGroup;
 			children = (
+				186139C82619A9A700E3E7AE /* UserProfile */,
 				18CB2EB226196FC70022CD4B /* Login */,
 				18D589302568FBFF00C5FCA3 /* GetListTrack */,
 				1830ADE52568C1D000E9695D /* BaseRequestModel.swift */,
@@ -384,6 +389,7 @@
 		1830ADE02568C18700E9695D /* APIService */ = {
 			isa = PBXGroup;
 			children = (
+				186139CE2619ACD100E3E7AE /* MeProfileAPI */,
 				18CB2EB92619721C0022CD4B /* LoginAPI */,
 				18D589382568FC4600C5FCA3 /* GetListTrackAPI */,
 				1830ADE12568C19B00E9695D /* BaseAPIProtocol.swift */,
@@ -408,6 +414,22 @@
 				186139BF2619A17B00E3E7AE /* PopUpView.swift */,
 			);
 			path = PopUp;
+			sourceTree = "<group>";
+		};
+		186139C82619A9A700E3E7AE /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				186139CA2619AB5400E3E7AE /* MeProfileResponse.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		186139CE2619ACD100E3E7AE /* MeProfileAPI */ = {
+			isa = PBXGroup;
+			children = (
+				186139CF2619ACEB00E3E7AE /* MeProfileAPI.swift */,
+			);
+			path = MeProfileAPI;
 			sourceTree = "<group>";
 		};
 		187002E0257DDF3A00388289 /* ProfileTabView */ = {
@@ -656,9 +678,11 @@
 				18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */,
 				18CB2EBB261972330022CD4B /* LoginAPI.swift in Sources */,
 				18D92B52257A387C00162881 /* CustomSegmentControl.swift in Sources */,
+				186139D02619ACEB00E3E7AE /* MeProfileAPI.swift in Sources */,
 				18B94B1E257635D1006571A3 /* MarqueeLabel.swift in Sources */,
 				18CB2EB426196FEA0022CD4B /* LoginRequestModel.swift in Sources */,
 				1803C34525779BD7004D9263 /* UserStatView.swift in Sources */,
+				186139CB2619AB5400E3E7AE /* MeProfileResponse.swift in Sources */,
 				1830ADBA2568B75500E9695D /* Favorite.swift in Sources */,
 				188FC2FE25723A400079EBC2 /* PlayerVC.swift in Sources */,
 				1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */,

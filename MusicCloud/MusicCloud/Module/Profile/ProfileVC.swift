@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProfileVC: UIViewController {
     
@@ -20,9 +21,11 @@ class ProfileVC: UIViewController {
     @IBOutlet private weak var profileImageView: UIImageView!
     @IBOutlet private weak var profileImageContainerView: UIView!
     @IBOutlet private weak var profileImageContainerViewWidth: NSLayoutConstraint!
-    
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var customSegmented: CustomSegmentedControl!
+    @IBOutlet private weak var tracksView: UserStatView!
+    @IBOutlet private weak var followersView: UserStatView!
+    @IBOutlet private weak var followingsView: UserStatView!
     
     let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
     
@@ -44,14 +47,10 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         customSegmented.delegate = self
         navigationController?.makeTransparent()
-        usernameLabel.text = "Quang Pham"
-        headerUsernameLabel.text = "Quang Pham"
-        descriptionLabel.text = "im aidan. music is my life. listen and take a trip inside my head"
-        profileImageView.image = #imageLiteral(resourceName: "background-image")
-        headerImageView.image = #imageLiteral(resourceName: "background-image")
         headerBlurView.alpha = 0.0
         scrollView.delegate = self
         setupTab()
+        fetchUserData()
     }
     
     func setupTab() {
@@ -63,6 +62,28 @@ class ProfileVC: UIViewController {
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
+    }
+}
+
+extension ProfileVC {
+    private func fetchUserData() {
+        HttpRequests.request(request: MeProfileAPI()) { [weak self] (result, response) in
+            if (result) {
+                self?.updateView(model: response.profile)
+            } else {
+                print(response.getErrorMessage())
+            }
+        }
+    }
+    
+    private func updateView(model: User) {
+        descriptionLabel.text = model.description ?? ""
+        usernameLabel.text = model.username ?? ""
+        headerUsernameLabel.text = model.username ?? ""
+        tracksView.setStat(text: String(model.trackCount ?? 0))
+        followersView.setStat(text: String(model.followersCount ?? 0))
+        followingsView.setStat(text: String(model.followingsCount ?? 0))
+        profileImageView.loadArtwork(path: model.avatarUrl)
     }
 }
 

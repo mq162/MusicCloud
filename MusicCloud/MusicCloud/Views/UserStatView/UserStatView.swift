@@ -23,8 +23,6 @@ import UIKit
     }
     
     private func setupView() {
-        self.borderWidth = 1.0
-        self.borderColors = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         let titleLabel = UILabel()
         titleLabel.textAlignment = .center
         titleLabel.text = title

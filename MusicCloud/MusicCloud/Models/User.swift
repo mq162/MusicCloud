@@ -12,7 +12,7 @@ class User: BaseModel {
     var avatarUrl: String?
     var country: String?
     var city: String?
-    var descriptionText: String?
+    var description: String?
     var anId: String?
     var username: String?
     var publicFavoritesCount: Int?
@@ -25,5 +25,10 @@ class User: BaseModel {
         super.mapping(map: map)
         avatarUrl <- map["avatar_url"]
         username <- map["username"]
+        description <- map["description"]
+        trackCount <- map["track_count"]
+        playlistCount <- map["playlist_count"]
+        followersCount <- map["followers_count"]
+        followingsCount <- map["followings_count"]
     }
 }

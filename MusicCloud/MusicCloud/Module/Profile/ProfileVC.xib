@@ -14,6 +14,8 @@
                 <outlet property="contentView" destination="34X-Vr-VAJ" id="V8O-yr-W9j"/>
                 <outlet property="customSegmented" destination="rcS-HU-xoc" id="0Bz-bV-yI1"/>
                 <outlet property="descriptionLabel" destination="bB9-Fo-p1H" id="SvG-uZ-Zli"/>
+                <outlet property="followersView" destination="QaM-Jx-SYR" id="kUj-aA-oAf"/>
+                <outlet property="followingsView" destination="WxU-Ud-GRr" id="0cv-G7-gcD"/>
                 <outlet property="headerBackView" destination="k9z-70-Ud6" id="1Ic-Dx-Qzq"/>
                 <outlet property="headerBlurView" destination="yFE-Xb-IPc" id="ae9-Cx-kbm"/>
                 <outlet property="headerImageView" destination="5t0-GT-qhF" id="ldf-Le-qHY"/>
@@ -23,6 +25,7 @@
                 <outlet property="profileImageContainerViewWidth" destination="6l4-IW-YnH" id="YSM-cR-aCT"/>
                 <outlet property="profileImageView" destination="LQE-ok-afP" id="TbY-gu-f2B"/>
                 <outlet property="scrollView" destination="QP4-Hz-GDy" id="Qtb-ez-hXm"/>
+                <outlet property="tracksView" destination="TI1-R5-qRS" id="b6h-43-jbe"/>
                 <outlet property="usernameLabel" destination="RoL-ZP-Zgg" id="SRY-4w-NtZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -140,36 +143,36 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nHo-Vg-MtX" userLabel="Stat Stack View">
-                            <rect key="frame" x="0.0" y="280.5" width="414" height="60"/>
+                            <rect key="frame" x="0.0" y="280.5" width="414" height="50"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TI1-R5-qRS" customClass="UserStatView" customModule="MusicCloud" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="138" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="50"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Tracks"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaM-Jx-SYR" customClass="UserStatView" customModule="MusicCloud" customModuleProvider="target">
-                                    <rect key="frame" x="138" y="0.0" width="138" height="60"/>
+                                    <rect key="frame" x="138" y="0.0" width="138" height="50"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Followers"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WxU-Ud-GRr" customClass="UserStatView" customModule="MusicCloud" customModuleProvider="target">
-                                    <rect key="frame" x="276" y="0.0" width="138" height="60"/>
+                                    <rect key="frame" x="276" y="0.0" width="138" height="50"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Followings"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Following"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="deS-4g-mXI"/>
+                                <constraint firstAttribute="height" constant="50" id="deS-4g-mXI"/>
                             </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34X-Vr-VAJ" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="350.5" width="414" height="800"/>
+                            <rect key="frame" x="0.0" y="340.5" width="414" height="800"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcS-HU-xoc" customClass="CustomSegmentedControl" customModule="MusicCloud" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
