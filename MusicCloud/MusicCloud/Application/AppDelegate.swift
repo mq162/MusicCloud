@@ -21,15 +21,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = true
         IQKeyboardManager.shared.toolbarPreviousNextAllowedClasses = [UIStackView.self, UIView.self]
         window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let tabbarController = TabbarVC()
-        
-        window?.rootViewController = tabbarController
+        if isAuthenticated() {
+            showHome()
+        } else {
+            showLogin()
+        }
         window?.makeKeyAndVisible()
         
         return true
     }
     
+    func showLogin() {
+        window?.rootViewController = LoginVC()
+    }
+    
+    func showHome() {
+        window?.rootViewController = TabbarVC()
+    }
     // MARK: UISceneSession Lifecycle
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -52,5 +60,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    private func isAuthenticated() -> Bool {
+        let userDefault = UserDefaultUtils()
+        return userDefault.checkKey(suiteName: "", key: Constants.Key.ACCESS_TOKEN)
     }
 }

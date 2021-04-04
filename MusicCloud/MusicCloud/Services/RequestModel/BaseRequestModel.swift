@@ -17,24 +17,24 @@ class RequestBaseModel: Mappable {
 
 class ResponseBaseModel: Mappable {
 
-    private var errorMessage = [String]()
+    private var errorMessage: String?
 
     required init?(map: Map) {}
-
+    
     required init() {
 
     }
-
+    
     required init(message: String) {
-        self.errorMessage = [message]
+        self.errorMessage = message
     }
 
     func mapping(map: Map) {
-        errorMessage <- map["e.message"]
+        errorMessage <- map["message"]
     }
 
     func getErrorMessage() -> String {
-        return errorMessage.first ?? "Error"
+        return errorMessage ?? "Failed to connect 🥲. Please try again!!"
     }
 }
 

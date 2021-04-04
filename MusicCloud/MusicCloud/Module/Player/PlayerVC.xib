@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -62,13 +62,13 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gold Digger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNM-Yy-ld9" userLabel="song Label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
-                            <rect key="frame" x="24" y="506" width="296" height="29"/>
+                            <rect key="frame" x="24" y="506" width="316" height="29"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kanye West" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhB-2B-Dd2" userLabel="artist label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
-                            <rect key="frame" x="24" y="541" width="296" height="21.5"/>
+                            <rect key="frame" x="24" y="541" width="316" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -140,7 +140,7 @@
                         <constraint firstItem="ZgQ-fS-25Y" firstAttribute="trailing" secondItem="xz9-BK-aYi" secondAttribute="trailing" constant="18" id="hnh-Hn-5Xr"/>
                         <constraint firstItem="rNM-Yy-ld9" firstAttribute="leading" secondItem="ijU-zd-hRZ" secondAttribute="leading" id="oM4-zX-5N7"/>
                         <constraint firstItem="rNM-Yy-ld9" firstAttribute="top" secondItem="ijU-zd-hRZ" secondAttribute="bottom" constant="40" id="usA-xx-1LW"/>
-                        <constraint firstItem="VAt-pN-U5P" firstAttribute="leading" secondItem="rNM-Yy-ld9" secondAttribute="trailing" constant="20" id="v4O-Zj-IPR"/>
+                        <constraint firstItem="VAt-pN-U5P" firstAttribute="leading" secondItem="rNM-Yy-ld9" secondAttribute="trailing" id="v4O-Zj-IPR"/>
                         <constraint firstItem="ijU-zd-hRZ" firstAttribute="top" secondItem="ZgQ-fS-25Y" secondAttribute="top" constant="100" id="vFf-AQ-uUF"/>
                     </constraints>
                 </view>
