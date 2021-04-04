@@ -49,6 +49,8 @@
 		1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830ADED2568CA0E00E9695D /* TrackCell.swift */; };
 		1830ADF62568CAA900E9695D /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830ADF52568CAA900E9695D /* TrackCell.xib */; };
 		1835B3DA257386A30053B8FF /* TransitionCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835B3D9257386A30053B8FF /* TransitionCordinator.swift */; };
+		186139AE26198F5700E3E7AE /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186139AD26198F5700E3E7AE /* UserDefaultUtils.swift */; };
+		186139C02619A17B00E3E7AE /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186139BF2619A17B00E3E7AE /* PopUpView.swift */; };
 		187002DA257DD8D700388289 /* SegmentTabContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187002D9257DD8D700388289 /* SegmentTabContentCell.swift */; };
 		187002DE257DD8FA00388289 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187002DD257DD8FA00388289 /* DemoCell.swift */; };
 		187002E2257DDF6300388289 /* ProfileTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187002E1257DDF6300388289 /* ProfileTabView.swift */; };
@@ -63,6 +65,9 @@
 		188FC2FE25723A400079EBC2 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188FC2FC25723A400079EBC2 /* PlayerVC.swift */; };
 		188FC2FF25723A400079EBC2 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FC2FD25723A400079EBC2 /* PlayerVC.xib */; };
 		18B94B1E257635D1006571A3 /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B94B1D257635D1006571A3 /* MarqueeLabel.swift */; };
+		18CB2EB426196FEA0022CD4B /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB2EB326196FEA0022CD4B /* LoginRequestModel.swift */; };
+		18CB2EB7261970ED0022CD4B /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB2EB6261970ED0022CD4B /* LoginResponseModel.swift */; };
+		18CB2EBB261972330022CD4B /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB2EBA261972330022CD4B /* LoginAPI.swift */; };
 		18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D589252568EA3800C5FCA3 /* TrackGridCell.swift */; };
 		18D589282568EA3800C5FCA3 /* TrackGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D589262568EA3800C5FCA3 /* TrackGridCell.xib */; };
 		18D5892D2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5892C2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift */; };
@@ -116,6 +121,8 @@
 		1830ADED2568CA0E00E9695D /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		1830ADF52568CAA900E9695D /* TrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		1835B3D9257386A30053B8FF /* TransitionCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCordinator.swift; sourceTree = "<group>"; };
+		186139AD26198F5700E3E7AE /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
+		186139BF2619A17B00E3E7AE /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		187002D9257DD8D700388289 /* SegmentTabContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentTabContentCell.swift; sourceTree = "<group>"; };
 		187002DD257DD8FA00388289 /* DemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
 		187002E1257DDF6300388289 /* ProfileTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabView.swift; sourceTree = "<group>"; };
@@ -130,6 +137,9 @@
 		188FC2FC25723A400079EBC2 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		188FC2FD25723A400079EBC2 /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
 		18B94B1D257635D1006571A3 /* MarqueeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
+		18CB2EB326196FEA0022CD4B /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
+		18CB2EB6261970ED0022CD4B /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		18CB2EBA261972330022CD4B /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		18D589252568EA3800C5FCA3 /* TrackGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackGridCell.swift; sourceTree = "<group>"; };
 		18D589262568EA3800C5FCA3 /* TrackGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackGridCell.xib; sourceTree = "<group>"; };
 		18D5892C2568EBA200C5FCA3 /* CollectionViewStyleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewStyleEnum.swift; sourceTree = "<group>"; };
@@ -237,8 +247,9 @@
 		1830AD842568B3C200E9695D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				187002E0257DDF3A00388289 /* ProfileTabView */,
+				186139BE2619A16800E3E7AE /* PopUp */,
 				1830ADC52568B8D600E9695D /* BaseView.swift */,
+				187002E0257DDF3A00388289 /* ProfileTabView */,
 				18D92B50257A386200162881 /* CustomSegment */,
 				1803C34325779BA0004D9263 /* UserStatView */,
 				18B94B1C257635B7006571A3 /* MarqueeLabel */,
@@ -253,6 +264,7 @@
 			children = (
 				1830ADC82568B91F00E9695D /* Utils.swift */,
 				1835B3D9257386A30053B8FF /* TransitionCordinator.swift */,
+				186139AD26198F5700E3E7AE /* UserDefaultUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -362,7 +374,8 @@
 		1830ADDF2568C17A00E9695D /* RequestModel */ = {
 			isa = PBXGroup;
 			children = (
-				18D589302568FBFF00C5FCA3 /* GetListTrackModel */,
+				18CB2EB226196FC70022CD4B /* Login */,
+				18D589302568FBFF00C5FCA3 /* GetListTrack */,
 				1830ADE52568C1D000E9695D /* BaseRequestModel.swift */,
 			);
 			path = RequestModel;
@@ -371,6 +384,7 @@
 		1830ADE02568C18700E9695D /* APIService */ = {
 			isa = PBXGroup;
 			children = (
+				18CB2EB92619721C0022CD4B /* LoginAPI */,
 				18D589382568FC4600C5FCA3 /* GetListTrackAPI */,
 				1830ADE12568C19B00E9695D /* BaseAPIProtocol.swift */,
 			);
@@ -386,6 +400,14 @@
 				18D589222568EA1C00C5FCA3 /* Track */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		186139BE2619A16800E3E7AE /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				186139BF2619A17B00E3E7AE /* PopUpView.swift */,
+			);
+			path = PopUp;
 			sourceTree = "<group>";
 		};
 		187002E0257DDF3A00388289 /* ProfileTabView */ = {
@@ -439,6 +461,23 @@
 			path = MarqueeLabel;
 			sourceTree = "<group>";
 		};
+		18CB2EB226196FC70022CD4B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				18CB2EB326196FEA0022CD4B /* LoginRequestModel.swift */,
+				18CB2EB6261970ED0022CD4B /* LoginResponseModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		18CB2EB92619721C0022CD4B /* LoginAPI */ = {
+			isa = PBXGroup;
+			children = (
+				18CB2EBA261972330022CD4B /* LoginAPI.swift */,
+			);
+			path = LoginAPI;
+			sourceTree = "<group>";
+		};
 		18D589222568EA1C00C5FCA3 /* Track */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,13 +504,13 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		18D589302568FBFF00C5FCA3 /* GetListTrackModel */ = {
+		18D589302568FBFF00C5FCA3 /* GetListTrack */ = {
 			isa = PBXGroup;
 			children = (
 				18D589312568FC1F00C5FCA3 /* GetListTrackRequestModel.swift */,
 				18D589342568FC3C00C5FCA3 /* GetListTrackResponseModel.swift */,
 			);
-			path = GetListTrackModel;
+			path = GetListTrack;
 			sourceTree = "<group>";
 		};
 		18D589382568FC4600C5FCA3 /* GetListTrackAPI */ = {
@@ -596,6 +635,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18CB2EB7261970ED0022CD4B /* LoginResponseModel.swift in Sources */,
 				188FC2F525723A040079EBC2 /* MiniPlayerView.swift in Sources */,
 				1830ADC22568B85D00E9695D /* UIViewExtension.swift in Sources */,
 				1830ADAA2568B48800E9695D /* SearchVC.swift in Sources */,
@@ -614,15 +654,19 @@
 				18D589322568FC1F00C5FCA3 /* GetListTrackRequestModel.swift in Sources */,
 				188FC2F1257239260079EBC2 /* UIViewControllerExtension.swift in Sources */,
 				18D589272568EA3800C5FCA3 /* TrackGridCell.swift in Sources */,
+				18CB2EBB261972330022CD4B /* LoginAPI.swift in Sources */,
 				18D92B52257A387C00162881 /* CustomSegmentControl.swift in Sources */,
 				18B94B1E257635D1006571A3 /* MarqueeLabel.swift in Sources */,
+				18CB2EB426196FEA0022CD4B /* LoginRequestModel.swift in Sources */,
 				1803C34525779BD7004D9263 /* UserStatView.swift in Sources */,
 				1830ADBA2568B75500E9695D /* Favorite.swift in Sources */,
 				188FC2FE25723A400079EBC2 /* PlayerVC.swift in Sources */,
 				1830ADEE2568CA0E00E9695D /* TrackCell.swift in Sources */,
 				1830ADC92568B91F00E9695D /* Utils.swift in Sources */,
 				1830ADE62568C1D000E9695D /* BaseRequestModel.swift in Sources */,
+				186139C02619A17B00E3E7AE /* PopUpView.swift in Sources */,
 				187002DE257DD8FA00388289 /* DemoCell.swift in Sources */,
+				186139AE26198F5700E3E7AE /* UserDefaultUtils.swift in Sources */,
 				1830ADE22568C19B00E9695D /* BaseAPIProtocol.swift in Sources */,
 				1835B3DA257386A30053B8FF /* TransitionCordinator.swift in Sources */,
 				1803C33625777E29004D9263 /* ComparableExtension.swift in Sources */,
@@ -720,7 +764,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -775,7 +819,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

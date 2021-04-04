@@ -39,7 +39,7 @@ class CustomSegmentedControl: UIView {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
         cv.delegate = self
         cv.dataSource = self
-        cv.showsHorizontalScrollIndicator = false
+        cv.showsHorizontalScrollIndicator = true
         cv.register(SegmentedTabCell.self, forCellWithReuseIdentifier: "SegmentedTabCell")
         cv.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         cv.translatesAutoresizingMaskIntoConstraints = false

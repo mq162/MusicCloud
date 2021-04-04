@@ -18,8 +18,12 @@ struct Constants {
     }
     
     struct SoundCloud {
-        static let SoundcloudClientID = "3ceea65b3d83ab630bc818ce1d179a82"
-        static let SoundcloudClientSecret =  "3b03e7bcc01b73c36075364e37fbfb58"
-        static let SoundcloudOauthTokenURL = "https://api.soundcloud.com/oauth2/token"
+        static let soundCloudClientID = "3ceea65b3d83ab630bc818ce1d179a82"
+        static let soundCloudClientSecret =  "3b03e7bcc01b73c36075364e37fbfb58"
+        static let soundCloudOauthTokenURL = "https://api.soundcloud.com/oauth2/token"
+    }
+    
+    struct Key {
+        static let ACCESS_TOKEN = "ACCESS_TOKEN"
     }
 }

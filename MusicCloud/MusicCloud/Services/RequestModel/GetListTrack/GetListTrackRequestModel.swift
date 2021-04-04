@@ -9,7 +9,7 @@ import ObjectMapper
 
 class GetListTrackRequestModel: RequestBaseModel {
     var limit: Int = 0
-    var clientID: String = Constants.SoundCloud.SoundcloudClientID
+    var clientID: String = Constants.SoundCloud.soundCloudClientID
     
     required init?(map: Map) {
         super.init(map: map)
