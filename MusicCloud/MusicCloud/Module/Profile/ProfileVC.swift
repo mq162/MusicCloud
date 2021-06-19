@@ -27,9 +27,15 @@ class ProfileVC: UIViewController {
     @IBOutlet private weak var followersView: UserStatView!
     @IBOutlet private weak var followingsView: UserStatView!
     
-    let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+    private let layout: UICollectionViewFlowLayout = {
+        let v = UICollectionViewFlowLayout()
+        v.scrollDirection = .horizontal
+        v.minimumInteritemSpacing = 0
+        v.minimumLineSpacing = 0
+        return v
+    }()
     
-    lazy var collectionView:UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
         cv.delegate = self
         cv.dataSource = self
@@ -53,8 +59,7 @@ class ProfileVC: UIViewController {
         fetchUserData()
     }
     
-    func setupTab() {
-        layout.scrollDirection = .horizontal
+    private func setupTab() {
         contentView.addSubview(collectionView)
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: customSegmented.bottomAnchor),
@@ -139,15 +144,6 @@ extension ProfileVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width:collectionView.frame.width, height: collectionView.frame.height)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
 }
 
 extension ProfileVC: SegmentedActivityDelegate {
@@ -155,7 +151,6 @@ extension ProfileVC: SegmentedActivityDelegate {
         let indexPath = IndexPath(item: index, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
-    
 }
 
 extension ProfileVC {

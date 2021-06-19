@@ -8,17 +8,22 @@
 import UIKit
 
 class TabDetailContentCollectionViewCell: UICollectionViewCell {
+        
+    private let layout: UICollectionViewFlowLayout = {
+        var flayout = UICollectionViewFlowLayout()
+        flayout.scrollDirection = .vertical
+        flayout.minimumLineSpacing = 0
+        flayout.minimumInteritemSpacing = 0
+        return flayout
+    }()
     
-    let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
-    
-    lazy var collectionView:UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
         cv.delegate = self
         cv.dataSource = self
         cv.showsVerticalScrollIndicator = false
         cv.register(DemoCollectionViewCell.self, forCellWithReuseIdentifier: "DemoCollectionViewCell") 
         cv.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        cv.translatesAutoresizingMaskIntoConstraints = false
         cv.setCollectionViewLayout(layout, animated: false)
         cv.backgroundColor = .clear
         return cv
@@ -26,18 +31,8 @@ class TabDetailContentCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame:frame)
-        layout.scrollDirection = .vertical
         addSubview(collectionView)
-        setUpConstraints()
-    }
-    
-    func setUpConstraints(){
-        NSLayoutConstraint.activate([
-            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            collectionView.topAnchor.constraint(equalTo: self.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-        ])
+        collectionView.fillLayoutInView(view: self)
     }
     
     required init?(coder: NSCoder) {
@@ -45,10 +40,9 @@ class TabDetailContentCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension TabDetailContentCollectionViewCell:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension TabDetailContentCollectionViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("oh no")
         return 13
     }
     
@@ -60,13 +54,4 @@ extension TabDetailContentCollectionViewCell:UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 100)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-
 }

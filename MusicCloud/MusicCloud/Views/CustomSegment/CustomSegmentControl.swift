@@ -13,28 +13,26 @@ protocol SegmentedActivityDelegate: class {
     
 class CustomSegmentedControl: UIView {
     
-    var trackViewLeadingAnchor:NSLayoutConstraint?
+    var trackViewLeadingAnchor: NSLayoutConstraint?
     
     weak var delegate: SegmentedActivityDelegate?
     
-    let tabArr = ["Tab 1", "Tab 2", "Tab 3", "Tab 4"]
+    let tabArr = ["Tracks", "Playlists", "Likes"]
     
-    let seperatorView:UIView = {
+    private let seperatorView: UIView = {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.backgroundColor = UIColor(red: 211/255, green: 208/255, blue: 208/255, alpha: 1)
         return v
     }()
     
-    let trackView:UIView = {
+    private let trackView:UIView = {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.backgroundColor = UIColor(red: 38/255, green: 155/255, blue: 255/255, alpha: 1)
         return v
     }()
-    
-    let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
-    
+        
     lazy var collectionView:UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
         cv.delegate = self
@@ -42,27 +40,30 @@ class CustomSegmentedControl: UIView {
         cv.showsHorizontalScrollIndicator = true
         cv.register(SegmentedTabCell.self, forCellWithReuseIdentifier: "SegmentedTabCell")
         cv.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.setCollectionViewLayout(layout, animated: false)
         cv.backgroundColor = .clear
         return cv
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder aCoder: NSCoder) {
+        super.init(coder: aCoder)
+        commonInit()
+    }
+    
+    private func commonInit() {
         addSubview(collectionView)
         addSubview(seperatorView)
         addSubview(trackView)
         setUpConstraints()
     }
     
-    func setUpConstraints(){
+    private func setUpConstraints(){
+        collectionView.fillLayoutInView(view: self)
         NSLayoutConstraint.activate([
-            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            collectionView.topAnchor.constraint(equalTo: self.topAnchor),
-            
             seperatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             seperatorView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             seperatorView.heightAnchor.constraint(equalToConstant: 0.7),
@@ -75,26 +76,17 @@ class CustomSegmentedControl: UIView {
         trackView.heightAnchor.constraint(equalToConstant: 0.7).isActive = true
         trackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
-    
-    required init?(coder aCoder: NSCoder) {
-        super.init(coder: aCoder)
-        addSubview(collectionView)
-        addSubview(seperatorView)
-        addSubview(trackView)
-        setUpConstraints()
-    }
-    
 }
 
-extension CustomSegmentedControl:UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension CustomSegmentedControl: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tabArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SegmentedTabCell", for: indexPath) as! SegmentedTabCell
-        cell.tabLabel.text = tabArr[indexPath.row]
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SegmentedTabCell", for: indexPath) as? SegmentedTabCell else { fatalError("Cannot create new cell")}
+        cell.setTabText(text: tabArr[indexPath.row])
         return cell
     }
     

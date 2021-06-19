@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,7 +35,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dey-1A-kQa" userLabel="Song Label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
-                    <rect key="frame" x="78.5" y="7" width="249" height="24"/>
+                    <rect key="frame" x="78.5" y="7" width="269" height="24"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                 <constraint firstItem="yXK-Kb-pph" firstAttribute="leading" secondItem="ejR-7D-ezM" secondAttribute="trailing" constant="10" id="hmg-7S-xFO"/>
                 <constraint firstItem="0eY-O8-wrD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="l8R-YR-xag"/>
                 <constraint firstAttribute="trailing" secondItem="Hhq-XV-GGs" secondAttribute="trailing" constant="20" id="lHc-Ns-tkt"/>
-                <constraint firstItem="Hhq-XV-GGs" firstAttribute="leading" secondItem="Dey-1A-kQa" secondAttribute="trailing" constant="20" id="nT7-hc-ebB"/>
+                <constraint firstItem="Hhq-XV-GGs" firstAttribute="leading" secondItem="Dey-1A-kQa" secondAttribute="trailing" id="nT7-hc-ebB"/>
                 <constraint firstAttribute="bottom" secondItem="VCk-3p-iae" secondAttribute="bottom" id="rPR-7n-R0e"/>
                 <constraint firstItem="Hhq-XV-GGs" firstAttribute="leading" secondItem="yXK-Kb-pph" secondAttribute="trailing" constant="20" id="uhc-mQ-9RN"/>
                 <constraint firstItem="Dey-1A-kQa" firstAttribute="leading" secondItem="ejR-7D-ezM" secondAttribute="trailing" constant="10" id="wfi-uo-bLn"/>

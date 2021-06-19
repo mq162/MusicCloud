@@ -88,4 +88,12 @@ extension UIView {
             self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -constant)
         ])
     }
+    
+    func centerInView(parent: UIView) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.centerYAnchor.constraint(equalTo: parent.centerYAnchor),
+            self.centerXAnchor.constraint(equalTo: parent.centerXAnchor)
+        ])
+    }
 }

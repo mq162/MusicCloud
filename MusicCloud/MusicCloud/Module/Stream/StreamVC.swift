@@ -68,6 +68,7 @@ class StreamVC: UIViewController {
     @objc private func searchTapped(){
         self.gridStyle.toggle()
         self.navigationItem.leftBarButtonItem = gridStyle ?  gridButton : listButton
+        configureDataSource()
     }
     
     private func requestTrack() {

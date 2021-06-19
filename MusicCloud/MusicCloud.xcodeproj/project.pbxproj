@@ -81,6 +81,9 @@
 		18D92B42257A263B00162881 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B41257A263B00162881 /* UIImageExtension.swift */; };
 		18D92B52257A387C00162881 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B51257A387C00162881 /* CustomSegmentControl.swift */; };
 		18D92B66257A465400162881 /* SegmentedTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B65257A465400162881 /* SegmentedTabCell.swift */; };
+		79CA2703267DE5500088A0E4 /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79CA2702267DE5500088A0E4 /* CircularStd-Medium.ttf */; };
+		79CA2705267DE5560088A0E4 /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79CA2704267DE5560088A0E4 /* CircularStd-Bold.ttf */; };
+		79CA2707267DE55B0088A0E4 /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79CA2706267DE55B0088A0E4 /* CircularStd-Book.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +158,9 @@
 		18D92B41257A263B00162881 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		18D92B51257A387C00162881 /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
 		18D92B65257A465400162881 /* SegmentedTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedTabCell.swift; sourceTree = "<group>"; };
+		79CA2702267DE5500088A0E4 /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.ttf"; sourceTree = "<group>"; };
+		79CA2704267DE5560088A0E4 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.ttf"; sourceTree = "<group>"; };
+		79CA2706267DE55B0088A0E4 /* CircularStd-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,7 @@
 		1830AD532568B0EB00E9695D /* MusicCloud */ = {
 			isa = PBXGroup;
 			children = (
+				79CA2700267DE16F0088A0E4 /* Resources */,
 				1830AD802568B3A000E9695D /* Application */,
 				1830AD882568B3D800E9695D /* Common */,
 				1830ADC02568B83800E9695D /* Extensions */,
@@ -210,7 +217,6 @@
 				1830AD842568B3C200E9695D /* Views */,
 				1830AD832568B3B900E9695D /* Module */,
 				1830AD822568B3AE00E9695D /* Storyboards */,
-				1830AD5D2568B0EF00E9695D /* Assets.xcassets */,
 				1830AD622568B0EF00E9695D /* Info.plist */,
 			);
 			path = MusicCloud;
@@ -251,6 +257,7 @@
 		1830AD842568B3C200E9695D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				79CA26FF267DE1030088A0E4 /* Button */,
 				186139BE2619A16800E3E7AE /* PopUp */,
 				1830ADC52568B8D600E9695D /* BaseView.swift */,
 				187002E0257DDF3A00388289 /* ProfileTabView */,
@@ -562,6 +569,32 @@
 			path = Segmented;
 			sourceTree = "<group>";
 		};
+		79CA26FF267DE1030088A0E4 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		79CA2700267DE16F0088A0E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				79CA2701267DE17B0088A0E4 /* Fonts */,
+				1830AD5D2568B0EF00E9695D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		79CA2701267DE17B0088A0E4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				79CA2706267DE55B0088A0E4 /* CircularStd-Book.ttf */,
+				79CA2704267DE5560088A0E4 /* CircularStd-Bold.ttf */,
+				79CA2702267DE5500088A0E4 /* CircularStd-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -633,6 +666,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CA2703267DE5500088A0E4 /* CircularStd-Medium.ttf in Resources */,
 				188FC2F925723A110079EBC2 /* MiniPlayerView.xib in Resources */,
 				1830AD612568B0EF00E9695D /* LaunchScreen.storyboard in Resources */,
 				188FC2E3257229A70079EBC2 /* TabbarVC.xib in Resources */,
@@ -645,7 +679,9 @@
 				1830ADA52568B47500E9695D /* PlaylistVC.xib in Resources */,
 				1830AD942568B43A00E9695D /* StreamVC.xib in Resources */,
 				1830AD5E2568B0EF00E9695D /* Assets.xcassets in Resources */,
+				79CA2707267DE55B0088A0E4 /* CircularStd-Book.ttf in Resources */,
 				1830ADAE2568B49900E9695D /* LoginVC.xib in Resources */,
+				79CA2705267DE5560088A0E4 /* CircularStd-Bold.ttf in Resources */,
 				1830AD5C2568B0EB00E9695D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
