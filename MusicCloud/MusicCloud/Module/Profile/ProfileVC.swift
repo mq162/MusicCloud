@@ -52,7 +52,8 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customSegmented.delegate = self
-        navigationController?.makeTransparent()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationController?.makeTransparent()
         headerBlurView.alpha = 0.0
         scrollView.delegate = self
         setupTab()

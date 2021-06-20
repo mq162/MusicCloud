@@ -8,10 +8,11 @@
 import UIKit
 import Alamofire
 
-class LoginVC: UIViewController {
+final class LoginVC: UIViewController {
 
     @IBOutlet private weak var tfEmail: UITextField!
     @IBOutlet private weak var tfPassword: UITextField!
+    @IBOutlet private weak var lblSignUp: UILabel!
     
     private lazy var userDefault = UserDefaultUtils()
     
@@ -19,7 +20,7 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
     }
     
-    func setupView() {
+    private func setupView() {
        
     }
     
@@ -41,4 +42,12 @@ class LoginVC: UIViewController {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         appDelegate.showHome()
     }
+    
+    
+    @IBAction func btnFacebookClicked(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnGoogleClicked(_ sender: UIButton) {
+    }
+    
  }

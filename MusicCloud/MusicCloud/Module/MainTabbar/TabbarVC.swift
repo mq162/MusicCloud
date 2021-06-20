@@ -48,11 +48,10 @@ class TabbarVC: UIViewController {
     private func setupTabItems() {
         let streamVC = StreamVC().addToNavigationController()
         let searchVC = SearchVC().addToNavigationController()
-        let playlistVC = PlaylistVC().addToNavigationController()
         let historyVC = HistoryVC().addToNavigationController()
         let profileVC = ProfileVC().addToNavigationController()
 
-        viewControllers = [streamVC, searchVC, playlistVC, historyVC, profileVC]
+        viewControllers = [streamVC, searchVC, historyVC, profileVC]
         didSelectTab()
     }
     

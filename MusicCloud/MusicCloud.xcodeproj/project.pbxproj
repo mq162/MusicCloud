@@ -17,7 +17,6 @@
 		1830AD612568B0EF00E9695D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1830AD5F2568B0EF00E9695D /* LaunchScreen.storyboard */; };
 		1830AD6E2568B23200E9695D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1830AD6D2568B23200E9695D /* Alamofire */; };
 		1830AD722568B26000E9695D /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 1830AD712568B26000E9695D /* ObjectMapper */; };
-		1830AD762568B2D600E9695D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1830AD752568B2D600E9695D /* IQKeyboardManagerSwift */; };
 		1830AD7A2568B2FF00E9695D /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 1830AD792568B2FF00E9695D /* Nuke */; };
 		1830AD8B2568B41800E9695D /* HistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830AD892568B41800E9695D /* HistoryVC.xib */; };
 		1830AD8C2568B41800E9695D /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830AD8A2568B41800E9695D /* HistoryVC.swift */; };
@@ -81,6 +80,7 @@
 		18D92B42257A263B00162881 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B41257A263B00162881 /* UIImageExtension.swift */; };
 		18D92B52257A387C00162881 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B51257A387C00162881 /* CustomSegmentControl.swift */; };
 		18D92B66257A465400162881 /* SegmentedTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B65257A465400162881 /* SegmentedTabCell.swift */; };
+		79BBB553267F14D300215C41 /* UITextFiled+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBB552267F14D200215C41 /* UITextFiled+Extension.swift */; };
 		79CA2703267DE5500088A0E4 /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79CA2702267DE5500088A0E4 /* CircularStd-Medium.ttf */; };
 		79CA2705267DE5560088A0E4 /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79CA2704267DE5560088A0E4 /* CircularStd-Bold.ttf */; };
 		79CA2707267DE55B0088A0E4 /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79CA2706267DE55B0088A0E4 /* CircularStd-Book.ttf */; };
@@ -158,6 +158,7 @@
 		18D92B41257A263B00162881 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		18D92B51257A387C00162881 /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
 		18D92B65257A465400162881 /* SegmentedTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedTabCell.swift; sourceTree = "<group>"; };
+		79BBB552267F14D200215C41 /* UITextFiled+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextFiled+Extension.swift"; sourceTree = "<group>"; };
 		79CA2702267DE5500088A0E4 /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.ttf"; sourceTree = "<group>"; };
 		79CA2704267DE5560088A0E4 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.ttf"; sourceTree = "<group>"; };
 		79CA2706267DE55B0088A0E4 /* CircularStd-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.ttf"; sourceTree = "<group>"; };
@@ -171,7 +172,6 @@
 				1830AD722568B26000E9695D /* ObjectMapper in Frameworks */,
 				1830ADD52568BCEB00E9695D /* NVActivityIndicatorView in Frameworks */,
 				1830AD6E2568B23200E9695D /* Alamofire in Frameworks */,
-				1830AD762568B2D600E9695D /* IQKeyboardManagerSwift in Frameworks */,
 				1830AD7A2568B2FF00E9695D /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +378,7 @@
 				1803C33525777E29004D9263 /* ComparableExtension.swift */,
 				1803C33825777E6F004D9263 /* UINavigationControllerExtension.swift */,
 				18D92B41257A263B00162881 /* UIImageExtension.swift */,
+				79BBB552267F14D200215C41 /* UITextFiled+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -614,7 +615,6 @@
 			packageProductDependencies = (
 				1830AD6D2568B23200E9695D /* Alamofire */,
 				1830AD712568B26000E9695D /* ObjectMapper */,
-				1830AD752568B2D600E9695D /* IQKeyboardManagerSwift */,
 				1830AD792568B2FF00E9695D /* Nuke */,
 				1830ADD42568BCEB00E9695D /* NVActivityIndicatorView */,
 			);
@@ -648,7 +648,6 @@
 			packageReferences = (
 				1830AD6C2568B23200E9695D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				1830AD702568B26000E9695D /* XCRemoteSwiftPackageReference "ObjectMapper" */,
-				1830AD742568B2D600E9695D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				1830AD782568B2FF00E9695D /* XCRemoteSwiftPackageReference "Nuke" */,
 				1830ADD32568BCEB00E9695D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
@@ -746,6 +745,7 @@
 				188E3DEA256951EE0087EAAD /* GetListTrackNextPageAPI.swift in Sources */,
 				188FC2EE257238F20079EBC2 /* Array+UIPropertyViewAnimator.swift in Sources */,
 				1830ADBB2568B75500E9695D /* PlaylistRepost.swift in Sources */,
+				79BBB553267F14D300215C41 /* UITextFiled+Extension.swift in Sources */,
 				1830ADC62568B8D600E9695D /* BaseView.swift in Sources */,
 				188E3DEE25695E440087EAAD /* LoadingFooterCell.swift in Sources */,
 			);
@@ -969,14 +969,6 @@
 				minimumVersion = 4.1.0;
 			};
 		};
-		1830AD742568B2D600E9695D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.5.6;
-			};
-		};
 		1830AD782568B2FF00E9695D /* XCRemoteSwiftPackageReference "Nuke" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke.git";
@@ -1005,11 +997,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1830AD702568B26000E9695D /* XCRemoteSwiftPackageReference "ObjectMapper" */;
 			productName = ObjectMapper;
-		};
-		1830AD752568B2D600E9695D /* IQKeyboardManagerSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1830AD742568B2D600E9695D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
 		};
 		1830AD792568B2FF00E9695D /* Nuke */ = {
 			isa = XCSwiftPackageProductDependency;

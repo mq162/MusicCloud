@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CircularStd-Bold.ttf">
+            <string>CircularStd-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -17,31 +21,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="j6D-aE-3Ii">
-                                <rect key="frame" x="132" y="373" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="6rw-af-OB0"/>
-                                    <constraint firstAttribute="height" constant="150" id="boR-M4-gGF"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen" translatesAutoresizingMaskIntoConstraints="NO" id="Q4R-oO-iDe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="NYX-pP-wM5">
+                                <rect key="frame" x="50" y="144" width="314" height="52"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="nZw-X9-Tht">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="8vU-Gu-5ZL"/>
+                                            <constraint firstAttribute="height" constant="52" id="PxR-OL-naM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MUSIC CLOUD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m1L-bm-7K3">
+                                        <rect key="frame" x="60" y="2" width="254" height="48.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="38"/>
+                                        <color key="textColor" red="0.0039215686274509803" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="j6D-aE-3Ii" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0zq-32-T8b"/>
-                            <constraint firstItem="j6D-aE-3Ii" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jqj-0M-Fhw"/>
+                            <constraint firstItem="Q4R-oO-iDe" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="2YN-dl-pX4"/>
+                            <constraint firstAttribute="trailing" secondItem="Q4R-oO-iDe" secondAttribute="trailing" id="5xa-oO-gvl"/>
+                            <constraint firstItem="NYX-pP-wM5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="B78-CM-4hr"/>
+                            <constraint firstAttribute="bottom" secondItem="Q4R-oO-iDe" secondAttribute="bottom" id="L8G-wI-jeu"/>
+                            <constraint firstItem="NYX-pP-wM5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="WmE-pi-cNl"/>
+                            <constraint firstItem="Q4R-oO-iDe" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="eLN-M4-mq9"/>
+                            <constraint firstItem="NYX-pP-wM5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hDJ-jg-40N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NYX-pP-wM5" secondAttribute="trailing" constant="50" id="ofb-5I-oD5"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="header" width="253" height="41"/>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="logo" width="97" height="106"/>
+        <image name="splash_screen" width="750" height="1624"/>
     </resources>
 </document>

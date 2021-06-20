@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StreamVC: UIViewController {
+final class StreamVC: UIViewController {
     
     enum Section {
         case main
@@ -19,7 +19,7 @@ class StreamVC: UIViewController {
     private var tracks = [Track]()
     private var nextUrl = ""
     private var isLoading: Bool = false
-    private var gridStyle: Bool = true
+    private var gridStyle: Bool = false
     var onClickSong: (() -> Void)?
     
     private lazy var gridButton: UIBarButtonItem = {
@@ -55,7 +55,7 @@ class StreamVC: UIViewController {
 
     private func setupNavBar() {
         self.navigationItem.title = "Stream"
-        self.navigationItem.leftBarButtonItem = gridButton
+        self.navigationItem.leftBarButtonItem = listButton
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "search"),
                                                                  style: .plain, target: self, action: #selector(searchTapped))
     }

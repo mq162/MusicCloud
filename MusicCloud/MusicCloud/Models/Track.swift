@@ -43,8 +43,8 @@ class Track: BaseModel, Hashable {
     override func mapping(map: Map) {
         super.mapping(map: map)
         id <- map["origin.id"]
-        user <- map["user"]
-        title <- map["title"]
+        user <- map["origin.user"]
+        title <- map["origin.title"]
         artworkUrl <- map["origin.artwork_url"]
         createdAt <- map["created_at"]
         directory_path <- map["directory_path"]
