@@ -25,7 +25,7 @@ final class TabbarVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupTabItems()
-        //add(playerViewController)
+        add(playerViewController)
         view.bringSubviewToFront(tabBarContainer)
         self.tabBar.delegate = self
     }

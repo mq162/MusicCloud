@@ -35,8 +35,8 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <items>
                                 <tabBarItem title="" image="tabbar_home" id="Ud8-wt-9uy"/>
-                                <tabBarItem tag="1" title="" image="tabbar_favorite" id="sMh-bk-FZl"/>
-                                <tabBarItem tag="2" title="" image="tabbar_search" id="Jdz-Ea-iHq"/>
+                                <tabBarItem tag="1" title="" image="tabbar_search" id="sMh-bk-FZl"/>
+                                <tabBarItem tag="2" title="" image="tabbar_favorite" id="Jdz-Ea-iHq"/>
                                 <tabBarItem tag="3" title="" image="tabbar_profile" id="YRy-do-ubi"/>
                             </items>
                             <color key="tintColor" name="blue"/>

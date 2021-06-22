@@ -27,7 +27,7 @@ extension LoadingFooterCell {
     
     func showLoadingIndicator() {
         if activityIndicator == nil {
-            activityIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20.0, height: 20.0), type: NVActivityIndicatorType.lineScalePulseOut, color: #colorLiteral(red: 0.2588235294, green: 0.7568627451, blue: 0.968627451, alpha: 1))
+            activityIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20.0, height: 20.0), type: NVActivityIndicatorType.lineScalePulseOut, color: #colorLiteral(red: 0.0862745098, green: 0.6549019608, blue: 1, alpha: 1))
             
             self.addSubview(activityIndicator)
             activityIndicator.centerInView(parent: self)

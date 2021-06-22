@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CircularStd-Medium.ttf">
+            <string>CircularStd-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MiniPlayerView" customModule="MusicCloud" customModuleProvider="target">
             <connections>
                 <outlet property="btnPlay" destination="Hhq-XV-GGs" id="SEs-Jw-rIp"/>
                 <outlet property="imgArtwork" destination="ejR-7D-ezM" id="eNH-Ea-3o4"/>
-                <outlet property="lblArtist" destination="yXK-Kb-pph" id="4u3-UN-6py"/>
                 <outlet property="lblTitle" destination="Dey-1A-kQa" id="swQ-6t-qbR"/>
             </connections>
         </placeholder>
@@ -22,8 +27,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-image" translatesAutoresizingMaskIntoConstraints="NO" id="ejR-7D-ezM">
-                    <rect key="frame" x="0.0" y="2" width="68.5" height="68.5"/>
+                    <rect key="frame" x="16" y="10.5" width="50" height="50"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="50" id="9ya-9h-8zQ"/>
                         <constraint firstAttribute="width" secondItem="ejR-7D-ezM" secondAttribute="height" multiplier="1:1" id="VdM-GE-0oC"/>
                     </constraints>
                 </imageView>
@@ -34,16 +40,10 @@
                         <constraint firstAttribute="height" constant="0.5" id="0ra-Uf-XtT"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dey-1A-kQa" userLabel="Song Label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
-                    <rect key="frame" x="78.5" y="7" width="269" height="24"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXK-Kb-pph" userLabel="Artist Label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
-                    <rect key="frame" x="78.5" y="31" width="249" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dey-1A-kQa" userLabel="Song Label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
+                    <rect key="frame" x="79" y="19" width="268.5" height="0.0"/>
+                    <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="13"/>
+                    <color key="textColor" name="white"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhq-XV-GGs" userLabel="Button Play">
@@ -67,25 +67,21 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="stealGrey"/>
             <constraints>
                 <constraint firstItem="VCk-3p-iae" firstAttribute="top" secondItem="Hhq-XV-GGs" secondAttribute="bottom" id="5Nx-WL-br0"/>
-                <constraint firstItem="ejR-7D-ezM" firstAttribute="top" secondItem="0eY-O8-wrD" secondAttribute="bottom" id="9NE-WY-9J5"/>
+                <constraint firstItem="ejR-7D-ezM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="K9Z-Qn-rMa"/>
                 <constraint firstItem="0eY-O8-wrD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MPc-6a-2Lu"/>
                 <constraint firstItem="VCk-3p-iae" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RnW-5I-Zmh"/>
                 <constraint firstItem="VCk-3p-iae" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="TeX-tW-9bZ"/>
-                <constraint firstItem="ejR-7D-ezM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ULz-eY-rEP"/>
-                <constraint firstItem="Dey-1A-kQa" firstAttribute="top" secondItem="0eY-O8-wrD" secondAttribute="bottom" constant="5" id="cgY-kr-9vZ"/>
+                <constraint firstItem="ejR-7D-ezM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="ULz-eY-rEP"/>
+                <constraint firstItem="Dey-1A-kQa" firstAttribute="top" secondItem="0eY-O8-wrD" secondAttribute="bottom" constant="17" id="cgY-kr-9vZ"/>
                 <constraint firstItem="Hhq-XV-GGs" firstAttribute="top" secondItem="0eY-O8-wrD" secondAttribute="bottom" id="gL2-x1-Bgb"/>
-                <constraint firstItem="yXK-Kb-pph" firstAttribute="leading" secondItem="ejR-7D-ezM" secondAttribute="trailing" constant="10" id="hmg-7S-xFO"/>
                 <constraint firstItem="0eY-O8-wrD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="l8R-YR-xag"/>
                 <constraint firstAttribute="trailing" secondItem="Hhq-XV-GGs" secondAttribute="trailing" constant="20" id="lHc-Ns-tkt"/>
                 <constraint firstItem="Hhq-XV-GGs" firstAttribute="leading" secondItem="Dey-1A-kQa" secondAttribute="trailing" id="nT7-hc-ebB"/>
                 <constraint firstAttribute="bottom" secondItem="VCk-3p-iae" secondAttribute="bottom" id="rPR-7n-R0e"/>
-                <constraint firstItem="Hhq-XV-GGs" firstAttribute="leading" secondItem="yXK-Kb-pph" secondAttribute="trailing" constant="20" id="uhc-mQ-9RN"/>
-                <constraint firstItem="Dey-1A-kQa" firstAttribute="leading" secondItem="ejR-7D-ezM" secondAttribute="trailing" constant="10" id="wfi-uo-bLn"/>
-                <constraint firstItem="VCk-3p-iae" firstAttribute="top" secondItem="ejR-7D-ezM" secondAttribute="bottom" id="wjH-gb-Lei"/>
-                <constraint firstItem="yXK-Kb-pph" firstAttribute="top" secondItem="Dey-1A-kQa" secondAttribute="bottom" id="x5E-IO-GG1"/>
+                <constraint firstItem="Dey-1A-kQa" firstAttribute="leading" secondItem="ejR-7D-ezM" secondAttribute="trailing" constant="13" id="wfi-uo-bLn"/>
                 <constraint firstItem="0eY-O8-wrD" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="yhB-Ki-FoP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -93,21 +89,19 @@
         </view>
     </objects>
     <designables>
-        <designable name="Dey-1A-kQa">
-            <size key="intrinsicContentSize" width="51.5" height="24"/>
-        </designable>
-        <designable name="yXK-Kb-pph">
-            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
-        </designable>
+        <designable name="Dey-1A-kQa"/>
     </designables>
     <resources>
         <image name="background-image" width="951" height="989"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
+        <namedColor name="stealGrey">
+            <color red="0.10599999874830246" green="0.11800000071525574" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

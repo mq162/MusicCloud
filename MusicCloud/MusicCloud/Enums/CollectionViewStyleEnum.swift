@@ -61,6 +61,15 @@ extension CollectionViewStyle {
                                                          subitems: [item])
 
         let section = NSCollectionLayoutSection(group: group)
+        
+        let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                     heightDimension: .estimated(40))
+        
+        let sectionFooter = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerFooterSize,
+                                                                        elementKind: "loading-footer",
+                                                                        alignment: .bottom)
+        section.boundarySupplementaryItems = [sectionFooter]
+        
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
