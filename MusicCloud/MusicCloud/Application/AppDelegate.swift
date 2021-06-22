@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             showLogin()
         }
         window?.makeKeyAndVisible()
-        
+
         return true
     }
     

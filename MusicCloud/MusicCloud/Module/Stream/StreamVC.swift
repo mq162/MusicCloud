@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class StreamVC: UIViewController {
+final class StreamVC: BaseLargeTitleNavBarVC {
     
     enum Section {
         case main
@@ -19,56 +19,24 @@ final class StreamVC: UIViewController {
     private var tracks = [Track]()
     private var nextUrl = ""
     private var isLoading: Bool = false
-    private var gridStyle: Bool = false
     var onClickSong: (() -> Void)?
-    
-    private lazy var gridButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(image: UIImage(systemName: "square.grid.3x3.fill"),
-                                     style: .plain, target: self, action: #selector(addTapped))
-        return button
-    }()
-    
-    private lazy var listButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(image: UIImage(systemName: "music.note.list"),
-                                     style: .plain, target: self, action: #selector(addTapped))
-        return button
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Home"
         setupView()
-        setupNavBar()
+        requestTrack()
         configureDataSource()
     }
     
     private func setupView() {
-        collectionView.register(UINib(nibName: TrackGridCell.identifier, bundle: nil),
-                                forCellWithReuseIdentifier: TrackGridCell.identifier)
         collectionView.register(UINib(nibName: TrackCell.identifier, bundle: nil),
                                 forCellWithReuseIdentifier: TrackCell.identifier)
         collectionView.register(LoadingFooterCell.self,
                                 forSupplementaryViewOfKind: "loading-footer",
                                 withReuseIdentifier: LoadingFooterCell.reuseIdentifier)
-        collectionView.collectionViewLayout = self.gridStyle ? CollectionViewStyle.grid.layout() : CollectionViewStyle.tracklist.layout()
+        collectionView.collectionViewLayout =  CollectionViewStyle.tracklist.layout()
         collectionView.delegate = self
-    }
-
-    private func setupNavBar() {
-        self.navigationItem.title = "Stream"
-        self.navigationItem.leftBarButtonItem = listButton
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "search"),
-                                                                 style: .plain, target: self, action: #selector(searchTapped))
-    }
-    
-    @objc private func addTapped() {
-        requestTrack()
-        onClickSong?()
-    }
-    
-    @objc private func searchTapped(){
-        self.gridStyle.toggle()
-        self.navigationItem.leftBarButtonItem = gridStyle ?  gridButton : listButton
-        configureDataSource()
     }
     
     private func requestTrack() {
@@ -107,18 +75,13 @@ final class StreamVC: UIViewController {
         dataSource = UICollectionViewDiffableDataSource<Section, Track>(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, track: Track?) -> UICollectionViewCell? in
             
-            guard let gridCell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: TrackGridCell.identifier,
-                    for: indexPath) as? TrackGridCell else { fatalError("Cannot create new cell")}
-            
-            guard let listCell = collectionView.dequeueReusableCell(
+            guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: TrackCell.identifier,
                     for: indexPath) as? TrackCell else { fatalError("Cannot create new cell")}
             
-            let cell = self.gridStyle ? gridCell : listCell
             
             if let track = track {
-                self.gridStyle ? gridCell.setupCell(track: track) : listCell.setupCell(track: track)
+                cell.setupCell(track: track)
             }
             return cell
         }
@@ -130,6 +93,7 @@ final class StreamVC: UIViewController {
                     ofKind: kind,
                     withReuseIdentifier: LoadingFooterCell.reuseIdentifier,
                     for: indexPath) as? LoadingFooterCell else { fatalError("Cannot create new supplementary") }
+            print("laoding")
             self.isLoading ? supplementaryView.showLoadingIndicator() : supplementaryView.stopLoadingIndicator()
             return supplementaryView
         }

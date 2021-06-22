@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabbarVC: UIViewController {
+final class TabbarVC: UIViewController {
 
     @IBOutlet private weak var viewContainer: UIView!
     @IBOutlet weak var tabBarContainer: UIView!
@@ -25,7 +25,7 @@ class TabbarVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupTabItems()
-        add(playerViewController)
+        //add(playerViewController)
         view.bringSubviewToFront(tabBarContainer)
         self.tabBar.delegate = self
     }

@@ -80,6 +80,7 @@
 		18D92B42257A263B00162881 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B41257A263B00162881 /* UIImageExtension.swift */; };
 		18D92B52257A387C00162881 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B51257A387C00162881 /* CustomSegmentControl.swift */; };
 		18D92B66257A465400162881 /* SegmentedTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D92B65257A465400162881 /* SegmentedTabCell.swift */; };
+		7939C04326822113000B9922 /* BaseLargeTitleNavBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939C04226822113000B9922 /* BaseLargeTitleNavBarVC.swift */; };
 		79BBB553267F14D300215C41 /* UITextFiled+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BBB552267F14D200215C41 /* UITextFiled+Extension.swift */; };
 		79CA2703267DE5500088A0E4 /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79CA2702267DE5500088A0E4 /* CircularStd-Medium.ttf */; };
 		79CA2705267DE5560088A0E4 /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79CA2704267DE5560088A0E4 /* CircularStd-Bold.ttf */; };
@@ -158,6 +159,7 @@
 		18D92B41257A263B00162881 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		18D92B51257A387C00162881 /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
 		18D92B65257A465400162881 /* SegmentedTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedTabCell.swift; sourceTree = "<group>"; };
+		7939C04226822113000B9922 /* BaseLargeTitleNavBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLargeTitleNavBarVC.swift; sourceTree = "<group>"; };
 		79BBB552267F14D200215C41 /* UITextFiled+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextFiled+Extension.swift"; sourceTree = "<group>"; };
 		79CA2702267DE5500088A0E4 /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.ttf"; sourceTree = "<group>"; };
 		79CA2704267DE5560088A0E4 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.ttf"; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		1830AD832568B3B900E9695D /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				7939C04126822101000B9922 /* Base */,
 				188FC2DF2572297D0079EBC2 /* MainTabbar */,
 				188FC2FB25723A1E0079EBC2 /* Player */,
 				1830AD9F2568B45400E9695D /* Login */,
@@ -570,6 +573,14 @@
 			path = Segmented;
 			sourceTree = "<group>";
 		};
+		7939C04126822101000B9922 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7939C04226822113000B9922 /* BaseLargeTitleNavBarVC.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		79CA26FF267DE1030088A0E4 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -727,6 +738,7 @@
 				187002DE257DD8FA00388289 /* DemoCell.swift in Sources */,
 				186139AE26198F5700E3E7AE /* UserDefaultUtils.swift in Sources */,
 				1830ADE22568C19B00E9695D /* BaseAPIProtocol.swift in Sources */,
+				7939C04326822113000B9922 /* BaseLargeTitleNavBarVC.swift in Sources */,
 				1835B3DA257386A30053B8FF /* TransitionCordinator.swift in Sources */,
 				1803C33625777E29004D9263 /* ComparableExtension.swift in Sources */,
 				18D5893D2568FD7A00C5FCA3 /* BaseModel.swift in Sources */,
