@@ -24,14 +24,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iw-D5-9o5" userLabel="Container View">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="695"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                     <color key="backgroundColor" name="stealGrey"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7g4-cI-sD4" userLabel="Tabbar Container">
-                    <rect key="frame" x="0.0" y="695" width="375" height="117"/>
+                    <rect key="frame" x="0.0" y="729" width="375" height="83"/>
                     <subviews>
                         <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cz8-wt-0Jv">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <items>
                                 <tabBarItem title="" image="tabbar_home" id="Ud8-wt-9uy"/>

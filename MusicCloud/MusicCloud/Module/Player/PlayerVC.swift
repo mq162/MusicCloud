@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlayerVC: UIViewController {
+final class PlayerVC: UIViewController {
 
     @IBOutlet weak var playerView: UIView!
     @IBOutlet weak var miniPlayerView: MiniPlayerView!
@@ -17,6 +17,7 @@ class PlayerVC: UIViewController {
     @IBOutlet private weak var lblSong: MarqueeLabel!
     @IBOutlet private weak var lblArtist: MarqueeLabel!
     
+    private var tracks = [Track]()
     var onTappedClose: (() -> Void)?
     
     override func viewDidLoad() {
@@ -34,6 +35,11 @@ class PlayerVC: UIViewController {
         lblArtist.type = .leftRight
         lblArtist.speed = .rate(40)
         lblArtist.animationDelay = 2
+    }
+    
+    func updateModel(tracks: [Track], selectedIndex: Int) {
+        self.tracks = tracks
+        miniPlayerView.updateTrack(track: tracks[selectedIndex])
     }
     
     @IBAction func btnMoreClicked(_ sender: UIButton) {

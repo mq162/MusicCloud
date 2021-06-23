@@ -19,7 +19,7 @@ final class StreamVC: BaseLargeTitleNavBarVC {
     private var tracks = [Track]()
     private var nextUrl = ""
     private var isLoading: Bool = false
-    var onClickSong: (() -> Void)?
+    var onClickTrack: (([Track], Int) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,5 +114,9 @@ extension StreamVC: UICollectionViewDelegate {
         if indexPath.item == tracks.count - 5, !nextUrl.isEmpty, !isLoading  {
             _ = self.requestTrackNextPage()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onClickTrack?(tracks, indexPath.row)
     }
 }

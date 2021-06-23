@@ -19,11 +19,15 @@ import UIKit
         lblTitle.speed = .rate(40)
         lblTitle.fadeLength = 5
         lblTitle.animationDelay = 2
-        lblTitle.text = "Versace On The Floors Baby"
     }
     
     @IBAction func btnPlayClicked(_ sender: UIButton) {
         
+    }
+    
+    func updateTrack(track: Track) {
+        lblTitle.text = track.title
+        imgArtwork.loadArtwork(path: track.artworkUrl)
     }
     
 }
