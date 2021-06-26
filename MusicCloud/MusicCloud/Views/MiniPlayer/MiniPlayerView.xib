@@ -41,17 +41,19 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dey-1A-kQa" userLabel="Song Label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
-                    <rect key="frame" x="79" y="19" width="268.5" height="0.0"/>
+                    <rect key="frame" x="79" y="19" width="302" height="0.0"/>
                     <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="13"/>
                     <color key="textColor" name="white"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhq-XV-GGs" userLabel="Button Play">
-                    <rect key="frame" x="347.5" y="2" width="68.5" height="68.5"/>
+                    <rect key="frame" x="381" y="18" width="35" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Hhq-XV-GGs" secondAttribute="height" multiplier="1:1" id="82V-Lk-D6J"/>
+                        <constraint firstAttribute="height" constant="35" id="jYm-G8-I0s"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="tintColor" name="white"/>
                     <state key="normal" image="play.fill" catalog="system">
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                     </state>
@@ -69,14 +71,13 @@
             </subviews>
             <color key="backgroundColor" name="stealGrey"/>
             <constraints>
-                <constraint firstItem="VCk-3p-iae" firstAttribute="top" secondItem="Hhq-XV-GGs" secondAttribute="bottom" id="5Nx-WL-br0"/>
                 <constraint firstItem="ejR-7D-ezM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="K9Z-Qn-rMa"/>
                 <constraint firstItem="0eY-O8-wrD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MPc-6a-2Lu"/>
                 <constraint firstItem="VCk-3p-iae" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RnW-5I-Zmh"/>
                 <constraint firstItem="VCk-3p-iae" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="TeX-tW-9bZ"/>
                 <constraint firstItem="ejR-7D-ezM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="ULz-eY-rEP"/>
                 <constraint firstItem="Dey-1A-kQa" firstAttribute="top" secondItem="0eY-O8-wrD" secondAttribute="bottom" constant="17" id="cgY-kr-9vZ"/>
-                <constraint firstItem="Hhq-XV-GGs" firstAttribute="top" secondItem="0eY-O8-wrD" secondAttribute="bottom" id="gL2-x1-Bgb"/>
+                <constraint firstItem="Hhq-XV-GGs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gUm-Zn-Ejo"/>
                 <constraint firstItem="0eY-O8-wrD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="l8R-YR-xag"/>
                 <constraint firstAttribute="trailing" secondItem="Hhq-XV-GGs" secondAttribute="trailing" constant="20" id="lHc-Ns-tkt"/>
                 <constraint firstItem="Hhq-XV-GGs" firstAttribute="leading" secondItem="Dey-1A-kQa" secondAttribute="trailing" id="nT7-hc-ebB"/>

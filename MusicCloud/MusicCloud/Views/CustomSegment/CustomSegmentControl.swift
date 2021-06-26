@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SegmentedActivityDelegate: class {
+protocol SegmentedActivityDelegate: AnyObject {
     func scrollTo(index: Int)
 }
     

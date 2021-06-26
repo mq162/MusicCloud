@@ -21,8 +21,10 @@ final class TabbarVC: UIViewController {
     
     private lazy var playerViewController: PlayerVC = {
         let vc = PlayerVC()
-        vc.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: additionalBottomInset, right: 0)
         vc.view.isHidden = true
+        vc.additionalSafeAreaInsets.bottom = additionalBottomInset
+        view.insertSubview(vc.view, belowSubview: self.tabBarContainer)
+        vc.view.fillLayoutInView(view: view)
         return vc
     }()
     
@@ -35,20 +37,6 @@ final class TabbarVC: UIViewController {
     private var activeIndex = 0
     private var isMiniPlayerShowing = false
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-        setupTabItems()
-        self.tabBar.delegate = self
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        add(playerViewController)
-        coordinator = TransitionCoordinator(tabBarViewController: self, playerViewController: playerViewController)
-        view.bringSubviewToFront(tabBarContainer)
-    }
-    
     override var prefersStatusBarHidden: Bool {
         return shouldHideStatusBar
     }
@@ -57,14 +45,44 @@ final class TabbarVC: UIViewController {
         return .slide
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tabBar.delegate = self
+        setupUI()
+        setupTabItems()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupPlayer()
+        coordinator = TransitionCoordinator(tabBarViewController: self, playerViewController: playerViewController)
+        view.bringSubviewToFront(tabBarContainer)
+    }
+    
+    private func setupPlayer() {
+        addChild(playerViewController)
+        playerViewController.didMove(toParent: self)
+    }
+    
+    private func displayMiniPlayer(tracks: [Track], index: Int) {
+        playerViewController.updateModel(tracks: tracks, selectedIndex: index)
+        if isMiniPlayerShowing { return }
+        isMiniPlayerShowing = true
+        playerViewController.view.isHidden = false
+        playerViewController.view.frame = tabBarContainer.frame
+        UIView.animate(
+            withDuration: 0.5,
+            animations: {
+                self.playerViewController.view.frame = self.view.frame
+                self.view.layoutIfNeeded()
+            })
+    }
+    
     private func setupTabItems() {
         let streamVC = StreamVC()
         streamVC.onClickTrack = { [weak self] (tracks, index) in
             guard let weakSelf = self else { return }
-            if !weakSelf.isMiniPlayerShowing {
-                weakSelf.playerViewController.view.isHidden = false
-            }
-            weakSelf.playerViewController.updateModel(tracks: tracks, selectedIndex: index)
+            weakSelf.displayMiniPlayer(tracks: tracks, index: index)
         }
         let streamNavi = UINavigationController(rootViewController: streamVC)
         
