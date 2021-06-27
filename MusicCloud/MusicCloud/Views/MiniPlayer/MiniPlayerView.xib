@@ -32,6 +32,11 @@
                         <constraint firstAttribute="height" constant="50" id="9ya-9h-8zQ"/>
                         <constraint firstAttribute="width" secondItem="ejR-7D-ezM" secondAttribute="height" multiplier="1:1" id="VdM-GE-0oC"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCk-3p-iae" userLabel="Divider View">
                     <rect key="frame" x="0.0" y="70.5" width="436" height="0.5"/>
@@ -40,8 +45,8 @@
                         <constraint firstAttribute="height" constant="0.5" id="0ra-Uf-XtT"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dey-1A-kQa" userLabel="Song Label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
-                    <rect key="frame" x="79" y="19" width="302" height="0.0"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdgsgsdgsg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dey-1A-kQa" userLabel="Song Label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
+                    <rect key="frame" x="79" y="19" width="282" height="15.5"/>
                     <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="13"/>
                     <color key="textColor" name="white"/>
                     <nil key="highlightedColor"/>
@@ -68,20 +73,45 @@
                         <constraint firstAttribute="height" constant="2" id="5KC-B2-8NH"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAl-w3-9ml">
+                    <rect key="frame" x="80" y="49.5" width="281" height="1"/>
+                    <color key="backgroundColor" red="0.85098039215686272" green="0.8666666666666667" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="UXP-SK-2yF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qt9-yo-BpL" userLabel="ProgressView">
+                    <rect key="frame" x="80" y="48" width="100" height="4"/>
+                    <color key="backgroundColor" name="white"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="DnX-r7-hBj"/>
+                        <constraint firstAttribute="width" constant="100" id="ndy-Sa-vuY"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" name="stealGrey"/>
             <constraints>
+                <constraint firstItem="Qt9-yo-BpL" firstAttribute="centerY" secondItem="UAl-w3-9ml" secondAttribute="centerY" id="CzJ-sp-qXL"/>
                 <constraint firstItem="ejR-7D-ezM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="K9Z-Qn-rMa"/>
                 <constraint firstItem="0eY-O8-wrD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MPc-6a-2Lu"/>
                 <constraint firstItem="VCk-3p-iae" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RnW-5I-Zmh"/>
+                <constraint firstItem="UAl-w3-9ml" firstAttribute="top" secondItem="Dey-1A-kQa" secondAttribute="bottom" constant="15" id="Td9-aT-gkI"/>
                 <constraint firstItem="VCk-3p-iae" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="TeX-tW-9bZ"/>
                 <constraint firstItem="ejR-7D-ezM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="ULz-eY-rEP"/>
+                <constraint firstItem="UAl-w3-9ml" firstAttribute="trailing" secondItem="Dey-1A-kQa" secondAttribute="trailing" id="VlP-qA-RaF"/>
                 <constraint firstItem="Dey-1A-kQa" firstAttribute="top" secondItem="0eY-O8-wrD" secondAttribute="bottom" constant="17" id="cgY-kr-9vZ"/>
                 <constraint firstItem="Hhq-XV-GGs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gUm-Zn-Ejo"/>
+                <constraint firstItem="UAl-w3-9ml" firstAttribute="leading" secondItem="ejR-7D-ezM" secondAttribute="trailing" constant="14" id="ghS-9f-rWT"/>
                 <constraint firstItem="0eY-O8-wrD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="l8R-YR-xag"/>
                 <constraint firstAttribute="trailing" secondItem="Hhq-XV-GGs" secondAttribute="trailing" constant="20" id="lHc-Ns-tkt"/>
-                <constraint firstItem="Hhq-XV-GGs" firstAttribute="leading" secondItem="Dey-1A-kQa" secondAttribute="trailing" id="nT7-hc-ebB"/>
+                <constraint firstItem="Hhq-XV-GGs" firstAttribute="leading" secondItem="Dey-1A-kQa" secondAttribute="trailing" constant="20" id="nT7-hc-ebB"/>
                 <constraint firstAttribute="bottom" secondItem="VCk-3p-iae" secondAttribute="bottom" id="rPR-7n-R0e"/>
+                <constraint firstItem="Qt9-yo-BpL" firstAttribute="leading" secondItem="UAl-w3-9ml" secondAttribute="leading" id="s8s-4p-CYV"/>
                 <constraint firstItem="Dey-1A-kQa" firstAttribute="leading" secondItem="ejR-7D-ezM" secondAttribute="trailing" constant="13" id="wfi-uo-bLn"/>
                 <constraint firstItem="0eY-O8-wrD" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="yhB-Ki-FoP"/>
             </constraints>
@@ -90,7 +120,9 @@
         </view>
     </objects>
     <designables>
-        <designable name="Dey-1A-kQa"/>
+        <designable name="Dey-1A-kQa">
+            <size key="intrinsicContentSize" width="71.5" height="15.5"/>
+        </designable>
     </designables>
     <resources>
         <image name="background-image" width="951" height="989"/>

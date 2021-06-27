@@ -44,7 +44,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrl-Ji-70V">
-                            <rect key="frame" x="156.5" y="25.5" width="101" height="21"/>
+                            <rect key="frame" x="156.5" y="24.5" width="101.5" height="23"/>
                             <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="18"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
@@ -72,13 +72,13 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNM-Yy-ld9" userLabel="song Label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
-                            <rect key="frame" x="16" y="436.5" width="382" height="0.0"/>
+                            <rect key="frame" x="16" y="437.5" width="382" height="0.0"/>
                             <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="21"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhB-2B-Dd2" userLabel="artist label" customClass="MarqueeLabel" customModule="MusicCloud" customModuleProvider="target">
-                            <rect key="frame" x="16" y="442.5" width="382" height="0.0"/>
+                            <rect key="frame" x="16" y="443.5" width="382" height="0.0"/>
                             <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="16"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
@@ -117,7 +117,7 @@
                             </constraints>
                         </stackView>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Fw1-cn-pph" customClass="ScalingCarouselCollectionView" customModule="MusicCloud" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="106.5" width="414" height="300"/>
+                            <rect key="frame" x="0.0" y="107.5" width="414" height="300"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="300" id="ZNV-Sg-zQ7"/>
